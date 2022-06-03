@@ -1,0 +1,72 @@
+@use "../utility";
+
+body {
+  font-family: utility.$main-font;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: utility.$main-font;
+  line-height: 1.1;
+  margin-block-start: 0;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* ******************* *\
+#main-container typography  
+\* ******************* */
+.profile__name {
+  font-size: utility.rem(14);
+  letter-spacing: -0.01rem;
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(24);
+  }
+}
+
+.profile__title {
+  color: var(--primary-text);
+}
+
+.profile__address {
+  color: var(--faded-text);
+  font-size: utility.rem(10);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(14);
+  }
+}
+
+.mini-card__title {
+  color: var(--secondary-text);
+  font-weight: 600;
+  font-size: utility.rem(12);
+  text-align: center;
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(18);
+  }
+}
+
+.mini-card__text {
+  color: var(--faded-text);
+  font-size: utility.rem(12);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(14);
+  }
+}
+
+/* ******************* *\
+#main-container typography  end 
+\* ******************* */

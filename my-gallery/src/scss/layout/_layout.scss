@@ -1,0 +1,114 @@
+@use "../utility";
+
+.super-container {
+  margin: utility.rem(16);
+}
+
+/* ******************* *\
+#main-container layout  
+\* ******************* */
+.main-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  justify-items: center;
+  row-gap: 1rem;
+  max-inline-size: utility.rem(600);
+  margin-inline: auto;
+
+  column-gap: 0.5rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__img {
+  margin-block-end: utility.rem(16);
+
+  border-radius: utility.rem(20);
+  inline-size: utility.rem(100);
+  @include utility.breakpoint(large) {
+    inline-size: utility.rem(120);
+  }
+}
+
+.profile__name {
+  margin-block-end: utility.rem(10);
+}
+
+.profile__address {
+  margin: 0;
+}
+
+.mini-card {
+  grid-row: 2;
+  max-inline-size: utility.rem(100);
+
+  border-radius: utility.rem(12);
+
+  text-align: center;
+
+  background-color: var(--background-color);
+  inline-size: 100%;
+
+  padding-block: utility.rem(8);
+}
+
+.mini-card__title {
+  margin: 0;
+  margin-block-end: utility.rem(2);
+
+  padding: 0;
+}
+
+/* ******************* *\
+#main-container layout end 
+\* ******************* */
+
+.gallery {
+  display: grid;
+  grid-template: 1fr 1fr 1fr;
+  grid-template-areas:
+    "img1 img2 img2"
+    "img3 img3 img4"
+    "img5 img6 img4";
+  gap: 0.7rem;
+  margin-block-start: utility.rem(36);
+}
+
+.img {
+  inline-size: 100%;
+
+  border-radius: utility.rem(16);
+}
+
+.img-1 {
+  grid-area: img1;
+}
+
+.img-2 {
+  grid-area: img2;
+}
+
+.img-3 {
+  grid-area: img3;
+}
+
+.img-4 {
+  grid-area: img4;
+}
+
+.img-5 {
+  grid-area: img5;
+}
+
+.img-6 {
+  grid-area: img6;
+}

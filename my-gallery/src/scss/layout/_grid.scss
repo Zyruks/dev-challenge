@@ -1,0 +1,13 @@
+@use "../utility";
+
+.grid-start {
+  justify-self: flex-start;
+}
+
+.grid-center {
+  justify-self: center;
+}
+
+.grid-end {
+  justify-self: flex-end;
+}
