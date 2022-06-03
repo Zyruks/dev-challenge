@@ -1,0 +1,207 @@
+@use "../utility";
+
+/* ******************* *\
+#main-container layout 
+\* ******************* */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-block: utility.rem(24);
+}
+
+.main-container__subcontainer {
+  display: flex;
+  gap: utility.rem(8);
+  align-items: flex-start;
+  @include utility.breakpoint(medium) {
+    max-inline-size: 80%;
+  }
+  @include utility.breakpoint(large) {
+    max-inline-size: 60%;
+  }
+}
+
+.main-container__h1 {
+  inline-size: 100%;
+
+  margin-block-end: utility.rem(10);
+}
+
+.main-container__description {
+  margin: 0;
+  padding: 0;
+  margin-block-end: utility.rem(16);
+}
+
+.main-container__icon {
+  padding-block-start: utility.rem(3);
+}
+
+.main-container__img {
+  inline-size: 100%;
+
+  border-radius: utility.rem(10);
+}
+
+/* ******************* *\
+#main-container layout end 
+\* ******************* */
+
+/* ******************* *\
+#aside-container layout  
+\* ******************* */
+.aside-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: utility.rem(16);
+  margin-block-end: utility.rem(30);
+  justify-content: space-between;
+  @include utility.breakpoint(large) {
+    flex-flow: column nowrap;
+    gap: utility.rem(30);
+    float: inline-end;
+    padding: utility.rem(24);
+    border-radius: utility.rem(8);
+
+    box-shadow: 0 0 utility.rem(15) utility.rem(-3) rgba(0, 0, 0, 10%);
+
+    max-inline-size: utility.rem(216);
+  }
+}
+
+.aside-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: utility.rem(6);
+  align-items: center;
+}
+
+.aside-item:first-child {
+  inline-size: 100%;
+}
+
+.aside-container__subcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-item--orange {
+  color: hsl(28deg, 87%, 62%);
+
+  // Check Stylelint for 1 liners
+}
+
+/* ******************* *\
+#aside-container layout end 
+\* ******************* */
+
+/* ******************* *\
+#ingredients-container layout  
+\* ******************* */
+.ingredients-container {
+  margin-block-end: utility.rem(30);
+  @include utility.breakpoint(large) {
+    max-inline-size: 70%;
+  }
+}
+
+.h3 {
+  margin-block-start: utility.rem(24);
+}
+
+.list-container__item {
+  display: flex;
+
+  gap: utility.rem(4);
+  align-items: flex-start;
+}
+
+.list-container__item__ingredients {
+  margin: 0;
+  padding: 0;
+}
+
+/* ******************* *\
+#ingredients-container layout end 
+\* ******************* */
+
+/* ******************* *\
+#instruction-container  
+\* ******************* */
+.instructions-container {
+  margin-block-end: utility.rem(80);
+  @include utility.breakpoint(large) {
+    max-inline-size: 70%;
+  }
+}
+
+.instructions-list {
+  margin-block-end: utility.rem(60);
+}
+
+.instructions-list__item {
+  display: flex;
+  gap: utility.rem(6);
+
+  margin-block: utility.rem(24);
+
+  counter-increment: steps;
+}
+
+.instructions-list__item::before {
+  border-radius: 10%;
+
+  background: hsl(28deg, 87%, 62%);
+
+  content: counter(steps);
+  min-inline-size: utility.rem(36);
+  block-size: utility.rem(36);
+  margin-inline-end: utility.rem(8);
+  place-items: center;
+}
+
+.list-container__instructions {
+  margin: 0;
+}
+
+/* ******************* *\
+#instruction-container end 
+\* ******************* */
+
+/* ****************** *\
+#Footer
+\* ****************** */
+
+.footer {
+  text-align: center;
+  margin-block: 2rem;
+  @include utility.breakpoint(large) {
+    position: relative;
+
+    inset-block-end: 0;
+  }
+  @include utility.breakpoint(x-large) {
+    margin-block: 1rem;
+  }
+}
+
+.footer p {
+  inline-size: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  font-weight: 700;
+}
+
+.footer,
+.footer a {
+  color: var(--faded-text);
+}
+
+/* ****************** *\
+#Footer End
+\* ****************** */

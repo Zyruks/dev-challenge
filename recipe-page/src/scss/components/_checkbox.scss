@@ -1,0 +1,40 @@
+@use "../utility";
+
+.checkbox {
+  display: inline-block;
+  margin: 0 utility.rem(3.2) utility.rem(6.4) 0;
+
+  border: utility.rem(1) solid hsl(0deg, 0%, 51%);
+  border-radius: utility.rem(4);
+
+  outline: none;
+
+  transition: box-shadow 200ms;
+
+  appearance: none;
+
+  min-block-size: utility.rem(21);
+  min-inline-size: utility.rem(21);
+  margin-block-start: utility.rem(6);
+}
+
+.checkbox:checked {
+  border-color: hsl(28deg, 87%, 62%);
+
+  background-color: hsl(28deg, 87%, 62%);
+}
+
+.checkbox:checked::before {
+  display: block;
+  inline-size: utility.rem(6);
+  block-size: utility.rem(12);
+  margin-block-start: utility.rem(2);
+  margin-inline-start: utility.rem(7);
+
+  border: solid hsl(0deg, 0%, 100%);
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+
+  content: "";
+}

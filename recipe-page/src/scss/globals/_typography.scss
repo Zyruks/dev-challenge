@@ -1,0 +1,147 @@
+@use "../utility";
+
+body {
+  font-family: utility.$main-font;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: utility.$font-title;
+  line-height: 1.1;
+  margin-block-start: 0;
+}
+
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* ******************* *\
+#main-container typography 
+\* ******************* */
+.main-container__h1 {
+  font-weight: 700;
+  font-size: clamp(utility.rem(24), 2.2vw, utility.rem(36));
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(48);
+  }
+}
+
+.main-container__description {
+  font-weight: 500;
+  font-size: utility.rem(12);
+  line-height: utility.rem(14.63);
+
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(14);
+  }
+}
+
+/* ******************* *\
+#main-container typography end
+\* ******************* */
+
+/* ******************* *\
+#aside-container typography end
+\* ******************* */
+.material-icons {
+  font-size: utility.rem(18);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(24);
+  }
+}
+
+.aside-item__h5 {
+  color: var(--faded-text);
+  font-weight: 700;
+  font-size: utility.rem(8);
+  text-transform: uppercase;
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(10);
+  }
+}
+
+.aside-item__span {
+  font-weight: 500;
+  font-size: utility.rem(10);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(12);
+  }
+}
+
+/* ******************* *\
+#aside-container typography end
+\* ******************* */
+
+/* ******************* *\
+#ingredients-container typography 
+\* ******************* */
+
+.h2 {
+  font-weight: 700;
+  font-size: utility.rem(18);
+  font-family: utility.$font-title;
+  text-transform: capitalize;
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(24);
+  }
+}
+
+.h3 {
+  font-weight: 400;
+  font-size: utility.rem(16);
+  font-family: utility.$font-title;
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(18);
+  }
+}
+
+.list-container__item__ingredients {
+  font-size: utility.rem(14);
+  line-height: utility.rem(25);
+  letter-spacing: utility.rem(-0.2);
+}
+
+/* ******************* *\
+
+#ingredients-container typography end
+\* ******************* */
+
+/* ******************* *\
+#instruction-container typography 
+\* ******************* */
+
+.instructions-list__item {
+  list-style: none;
+}
+
+.instructions-list__item::before {
+  color: hsl(0deg, 0%, 100%);
+  font-size: utility.rem(24);
+  font-family: utility.$font-title;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.list-container__instructions {
+  font-weight: 400;
+  font-size: utility.rem(16);
+}
+
+/* ******************* *\
+#instruction-container typography end
+\* ******************* */
+
+.source {
+  color: var(--faded-text);
+}

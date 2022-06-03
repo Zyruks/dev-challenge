@@ -1,0 +1,34 @@
+@use "../utility";
+
+html {
+  box-sizing: border-box;
+  margin: utility.rem(12);
+
+  font-size: 100%; // for accesibility porpuse
+}
+
+.super-container {
+  max-inline-size: utility.rem(900);
+
+  margin: utility.rem(1);
+  @include utility.breakpoint(large) {
+    margin: 0 auto;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+body,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
