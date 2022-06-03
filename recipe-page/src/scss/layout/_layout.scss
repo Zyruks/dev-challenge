@@ -51,6 +51,7 @@
 /* ******************* *\
 #aside-container layout  
 \* ******************* */
+/* stylelint-disable */
 .aside-container {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +61,8 @@
   @include utility.breakpoint(large) {
     flex-flow: column nowrap;
     gap: utility.rem(30);
-    float: inline-end;
+    float: right;
+    clear: both;
     padding: utility.rem(24);
     border-radius: utility.rem(8);
 
@@ -69,6 +71,7 @@
     max-inline-size: utility.rem(216);
   }
 }
+/* stylelint-enable */
 
 .aside-item {
   display: flex;
