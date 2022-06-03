@@ -1,0 +1,27 @@
+@use "../utility";
+
+.hover-animation {
+  transition: color 250ms ease-in-out, color 250ms ease-in-out;
+
+  &:hover {
+    color: var(--faded-text);
+  }
+}
+
+.btn-animation {
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+  &:hover {
+    color: hsl(0deg, 0%, 0%);
+
+    background-color: var(--faded-text);
+  }
+}
+
+.img-animation {
+  transition: transform 500ms ease-in-out;
+
+  &:hover {
+    transform: translateY(utility.rem(32));
+  }
+}
