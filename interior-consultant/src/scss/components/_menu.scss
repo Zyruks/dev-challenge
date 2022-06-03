@@ -1,0 +1,53 @@
+@use "../utility";
+
+/* ******************* *\
+#Burger
+\* ******************* */
+.burger {
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(large) {
+    display: none;
+  }
+}
+
+.burger__svg {
+  /* Extend `.rem()` in utility/_function.scss */
+  inline-size: utility.rem(48);
+  block-size: utility.rem(48);
+}
+
+.burger__line {
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  fill: none;
+  stroke: var(--primary-color);
+  stroke-width: 6;
+}
+
+.burger__line1,
+.burger__line2,
+.burger__line3 {
+  stroke-dasharray: 60 207;
+}
+
+.burger--opened .burger__line1,
+.burger--opened .burger__line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+}
+
+.burger--opened .burger__line2 {
+  stroke-dasharray: 1 40;
+  stroke-dashoffset: -30;
+}
+
+/* ******************* *\
+#Burger End
+\* ******************* */

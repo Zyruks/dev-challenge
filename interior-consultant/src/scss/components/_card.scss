@@ -1,0 +1,100 @@
+@use "../utility";
+
+/* ****************** *\
+#Card
+\* ****************** */
+.card {
+  position: relative;
+  inset-block-start: utility.rem(-50);
+
+  inset-inline-end: utility.rem(-10);
+
+  z-index: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: var(--background-color);
+  box-shadow: utility.rem(4) utility.rem(10) utility.rem(10) utility.rem(-5)
+    rgba(0, 0, 0, 76%);
+
+  /* Extend `.rem()` in utility/_function.scss */
+  inline-size: utility.rem(300);
+  block-size: utility.rem(138);
+
+  padding-block: utility.rem(12.8);
+  padding-inline-start: utility.rem(22.4);
+
+  // transform: translateX(utility.rem(12.8)) translateY(utility.rem(-51.2));
+
+  @include utility.breakpoint(medium) {
+    inline-size: 80%;
+
+    max-inline-size: utility.rem(400);
+    block-size: utility.rem(150);
+  }
+
+  @include utility.breakpoint(large) {
+    min-inline-size: utility.rem(300);
+    inset-block-start: utility.rem(-70);
+
+    inset-inline-end: utility.rem(45);
+
+    // transform: translateX(utility.rem(-32)) translateY(utility.rem(-64));
+    inline-size: 60%;
+
+    max-inline-size: utility.rem(450);
+  }
+
+  @include utility.breakpoint(x-large) {
+    inset-block-start: utility.rem(-70);
+
+    inset-inline-end: utility.rem(45);
+
+    // transform: translateX(utility.rem(-32)) translateY(utility.rem(-64));
+    inline-size: 70%;
+
+    max-inline-size: utility.rem(450);
+    block-size: utility.rem(189);
+  }
+}
+
+.card__text-grapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline-start: utility.rem(16);
+}
+
+.card__img {
+  inline-size: utility.rem(36.8);
+
+  border-radius: 50%;
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(48);
+  }
+  @include utility.breakpoint(x-large) {
+    inline-size: utility.rem(64);
+  }
+}
+
+.card__span {
+  inline-size: 100%;
+}
+
+.card__h2 {
+  margin-block-start: utility.rem(25.6);
+  inline-size: utility.rem(208);
+
+  line-height: utility.rem(24);
+  @include utility.breakpoint(x-large) {
+    inline-size: utility.rem(256);
+  }
+}
+
+/* ****************** *\
+#Card End
+\* ****************** */

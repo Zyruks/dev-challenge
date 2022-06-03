@@ -1,0 +1,169 @@
+@use "../utility";
+
+/* ******************* *\
+#Basics Typography
+\* ******************* */
+h1,
+h2,
+h3 {
+  margin: 0;
+
+  padding: 0;
+
+  font-weight: 700;
+
+  /* Extend `.$font` in utility/_fonts.scss */
+  font-family: utility.$font;
+  line-height: 1.1;
+  margin-block-start: 0;
+}
+
+h1 {
+  /* Extend `.rem()` in utility/_function.scss */
+  font-size: clamp(utility.rem(28), utility.rem(16) + 2vw, utility.rem(40));
+
+  // clamp(prefer size, min-size, max-size)
+}
+
+p {
+  margin-block-start: 0;
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* ******************* *\
+#Basics Typography End
+\* ******************* */
+
+.logo {
+  font-weight: 200;
+  font-size: utility.rem(14);
+  font-family: utility.$font-3;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+/* ******************* *\
+#Text-Container Typography
+\* ******************* */
+.text-container__h1 {
+  font-weight: 500;
+  font-size: utility.rem(36);
+  font-family: utility.$font-2;
+  @include utility.breakpoint(large) {
+    font-size: clamp(utility.rem(36), utility.rem(30), utility.rem(48));
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(48);
+  }
+}
+
+.text-container__p {
+  line-height: 1.3;
+  inline-size: 75%;
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(18);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(24);
+  }
+}
+
+.text-container__a {
+  font-weight: 700;
+
+  &:hover {
+    color: var(--faded-color);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+    @include utility.breakpoint(x-large) {
+      font-size: utility.rem(18);
+    }
+  }
+}
+
+/* ******************* *\
+#Text-Container Typography End
+\* ******************* */
+
+/* ******************* *\
+#Card Typography
+\* ******************* */
+
+.card__h3 {
+  font-weight: 500;
+  font-size: utility.rem(12);
+
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(12);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(14);
+  }
+}
+
+.card__span {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: utility.rem(10);
+
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(12);
+  }
+}
+
+.card__h2 {
+  font-weight: 700;
+  font-size: utility.rem(18);
+  font-family: utility.$font-2;
+  letter-spacing: utility.rem(0.32);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(20);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(20);
+    letter-spacing: utility.rem(0.64);
+  }
+}
+
+/* ******************* *\
+#Card Typography End
+\* ******************* */
+
+/* ******************* *\
+#Menu Typography
+\* ******************* */
+
+.menu__item {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: utility.rem(18);
+
+  &:hover {
+    color: var(--secondary-color);
+    border-block-end: utility.rem(1.6) solid var(--primary-color);
+
+    padding-block-end: utility.rem(4.8);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(20);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(26);
+  }
+}
+
+/* ******************* *\
+#Menu Typography End
+\* ******************* */

@@ -1,0 +1,129 @@
+@use "../utility";
+
+/* ****************** *\
+#Container
+\* ****************** */
+.super-container {
+  margin: 0 auto;
+
+  padding: utility.rem(16);
+
+  color: hsl(0deg, 0%, 100%);
+  max-inline-size: utility.rem(1440);
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.main-container {
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(large) {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 15rem;
+    block-size: 100%;
+    margin-block-start: utility.rem(80);
+  }
+  @include utility.breakpoint(x-large) {
+    margin-block-end: 0;
+  }
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  @include utility.breakpoint(large) {
+    max-inline-size: 49%;
+
+    justify-content: flex-end;
+  }
+}
+
+/* ****************** *\
+#Container End
+\* ****************** */
+
+/* ****************** *\
+#text-container
+\* ****************** */
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-block: 2rem;
+  @include utility.breakpoint(medium) {
+    margin-block: 4rem;
+  }
+  @include utility.breakpoint(large) {
+    max-inline-size: 49%;
+  }
+}
+
+.text-container__p {
+  margin-block-end: 2rem;
+  @include utility.breakpoint(medium) {
+    max-inline-size: 20rem;
+  }
+  @include utility.breakpoint(large) {
+    max-inline-size: 35rem;
+  }
+}
+
+/* ****************** *\
+#text-container End
+\* ****************** */
+
+.img-container__img {
+  inline-size: 100%;
+
+  @include utility.breakpoint(large) {
+    inline-size: 100%;
+
+    /* Extend `.rem()` in utility/_function.scss */
+  }
+  @include utility.breakpoint(x-large) {
+    inline-size: 100%;
+    max-inline-size: utility.rem(700);
+  }
+}
+
+/* ****************** *\
+#Footer
+\* ****************** */
+
+.footer {
+  text-align: center;
+  margin-block: 2rem;
+  @include utility.breakpoint(large) {
+    position: relative;
+
+    inset-block-end: 0;
+  }
+  @include utility.breakpoint(x-large) {
+    margin-block: 1rem;
+  }
+}
+
+.footer p {
+  inline-size: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  font-weight: 700;
+}
+
+.footer,
+.footer a {
+  color: var(--faded-text);
+}
+
+/* ****************** *\
+#Footer End
+\* ****************** */

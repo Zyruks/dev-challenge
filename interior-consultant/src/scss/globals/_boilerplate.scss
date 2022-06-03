@@ -1,0 +1,32 @@
+@use "../utility";
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+
+  font-size: 100%; // for accesibility porpuse
+  font-family: utility.$font; // font variable is  loading from utility folder/_fonts.scss
+
+  background-color: var(--background-color);
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(large) {
+    margin: 2rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
