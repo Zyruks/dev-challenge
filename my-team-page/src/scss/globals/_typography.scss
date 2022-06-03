@@ -1,0 +1,101 @@
+@use "../utility";
+
+body {
+  font-family: utility.$font;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* ******************* *\
+#text-container
+\* ******************* */
+.text-container__h1 {
+  font-weight: 700;
+
+  /* Extend `.rem()` in utility/_function.scss */
+  font-size: clamp(utility.rem(36), 8vw, utility.rem(36));
+  font-family: utility.$font-2;
+
+  letter-spacing: utility.rem(0.72);
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+  @include utility.breakpoint(medium) {
+    letter-spacing: utility.rem(1.6);
+  }
+  @include utility.breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.section__h2 {
+  font-weight: 600;
+  font-size: clamp(utility.rem(18), 2.5vw, utility.rem(20));
+  text-transform: uppercase;
+}
+
+.section__p {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: clamp(utility.rem(14), 2.5vw, utility.rem(18));
+}
+
+/* ******************* *\
+#text-container end
+\* ******************* */
+
+/* ******************* *\
+#card
+\* ******************* */
+
+.card__title {
+  font-weight: 400;
+  font-size: clamp(utility.rem(12), 2.5vw, utility.rem(16));
+  font-family: utility.$font-2;
+  text-transform: uppercase;
+  text-orientation: mixed;
+  writing-mode: vertical-rl;
+}
+
+.card__h3 {
+  font-weight: 600;
+  font-size: clamp(utility.rem(14), 2.5vw, utility.rem(18));
+}
+
+/* ******************* *\
+#card end
+\* ******************* */
+
+/* ******************* *\
+#footer
+\* ******************* */
+.footer {
+  text-align: center;
+}
+
+.footer a {
+  font-weight: 700;
+}
+
+.footer,
+.footer a {
+  color: var(--faded-text);
+}
+
+/* ******************* *\
+#footer end
+\* ******************* */

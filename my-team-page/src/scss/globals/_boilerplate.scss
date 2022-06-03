@@ -1,0 +1,30 @@
+@use "../utility";
+
+html {
+  box-sizing: border-box;
+  margin: utility.rem(16);
+
+  font-size: 100%; // for accesibility porpuse
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--super-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

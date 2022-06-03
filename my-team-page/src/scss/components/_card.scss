@@ -1,0 +1,64 @@
+@use "../utility";
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  inline-size: 100%;
+  min-inline-size: utility.rem(145);
+
+  &:nth-child(even) {
+    transform: translateY(utility.rem(64));
+  }
+
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(230);
+  }
+
+  @include utility.breakpoint(large) {
+    inline-size: utility.rem(215);
+
+    &:nth-child(even) {
+      transform: translateY(utility.rem(0));
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      transform: translateY(utility.rem(60));
+    }
+  }
+
+  @include utility.breakpoint(x-large) {
+    inline-size: utility.rem(275);
+  }
+  @include utility.breakpoint-down(small) {
+    &:nth-child(even) {
+      transform: translateY(utility.rem(0));
+    }
+  }
+}
+
+.card__img {
+  inline-size: utility.rem(120);
+
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(180);
+  }
+
+  @include utility.breakpoint(large) {
+    inline-size: utility.rem(180);
+  }
+  @include utility.breakpoint(x-large) {
+    inline-size: utility.rem(240);
+  }
+}
+
+.card__title {
+  margin-block-end: utility.rem(8);
+}
+
+.card__h3 {
+  inline-size: 100%;
+
+  margin-block-start: utility.rem(16);
+}

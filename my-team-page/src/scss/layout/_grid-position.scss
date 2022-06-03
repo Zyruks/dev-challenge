@@ -1,0 +1,19 @@
+@use "../utility";
+
+.grid-start {
+  @include utility.breakpoint(large) {
+    justify-self: flex-start;
+  }
+}
+
+.grid-end {
+  @include utility.breakpoint(large) {
+    justify-self: flex-end;
+  }
+}
+
+.grid-center {
+  @include utility.breakpoint(large) {
+    justify-self: center;
+  }
+}
