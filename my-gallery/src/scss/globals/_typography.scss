@@ -70,3 +70,20 @@ a:active {
 /* ******************* *\
 #main-container typography  end 
 \* ******************* */
+
+.footer {
+  text-align: center;
+}
+
+.footer p,
+.footer__link {
+  color: var(--faded-text);
+  font-size: utility.rem(14);
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(19.2);
+  }
+}
+
+.footer__link {
+  font-weight: 700;
+}
