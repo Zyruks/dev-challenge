@@ -1,0 +1,169 @@
+@use "../utility";
+
+body {
+  font-weight: 600;
+
+  /* Extend `.$font` in utility/_fonts.scss */
+  font-family: utility.$font;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-start: 0;
+
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+h4 {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.main-title {
+  color: var(--primary-text);
+  font-size: utility.rem(24);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(36);
+  }
+}
+
+/* ******************* *\
+#Form Typography
+\* ******************* */
+.form__legend {
+  color: var(--secondary-text);
+  font-size: utility.rem(14);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(18);
+  }
+}
+
+.form__label {
+  color: var(--third-text);
+  font-size: utility.rem(10);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(12);
+  }
+}
+
+.form__input {
+  color: var(--secondary-text);
+
+  font-size: utility.rem(12);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+.form__input::placeholder {
+  color: var(--faded-color);
+  font-size: utility.rem(12);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+.checkbox-container__span {
+  color: var(--third-color);
+  font-size: utility.rem(10);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(12);
+  }
+}
+
+.submit-btn {
+  color: hsl(0deg, 0%, 100%);
+  font-size: utility.rem(16);
+}
+
+/* ******************* *\
+#Form Typography End
+\* ******************* */
+
+/* ******************* *\
+#Shopping-card Typography End
+\* ******************* */
+.sub-total__title {
+  font-size: utility.rem(14);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(18);
+  }
+}
+
+.item-name {
+  color: var(--primary-text);
+  font-size: utility.rem(12);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+.actual-price {
+  color: var(--accent-color);
+  font-size: utility.rem(14);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+.original-price {
+  color: var(--primary-text);
+  font-size: utility.rem(10);
+  text-decoration: line-through;
+  text-decoration-thickness: utility.rem(1.5);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(12);
+  }
+}
+
+.btn {
+  color: var(--faded-color);
+  font-size: utility.rem(20);
+}
+
+.number {
+  color: var(--secondary-text);
+  font-size: utility.rem(16);
+}
+
+/* ******************* *\
+#Shopping-card Typography End
+\* ******************* */
+.icon {
+  @include utility.breakpoint(large) {
+    font-size: 2rem;
+  }
+}
+
+/* ******************* *\
+#Footer  Typography End
+\* ******************* */
+
+.footer {
+  text-align: center;
+}
+
+.footer p,
+.footer__link {
+  color: var(--faded-color);
+  font-size: utility.rem(14);
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(19.2);
+  }
+}
+
+.footer__link {
+  font-weight: 700;
+
+  &:hover {
+    color: hsl(0deg, 0%, 0%);
+  }
+}

@@ -1,0 +1,44 @@
+@use "../utility";
+
+.form__input--success {
+  border: 3px solid hsl(120deg, 61%, 50%);
+
+  visibility: visible;
+}
+
+.icon-validation {
+  transform: translateX(utility.rem(-32));
+  visibility: hidden;
+  inset-inline-start: 100%;
+  @include utility.breakpoint(large) {
+    transform: translateX(utility.rem(-50));
+  }
+}
+
+.icon-validation--country {
+  transform: translateX(utility.rem(-50));
+}
+
+.success {
+  color: hsl(120deg, 61%, 50%);
+
+  visibility: visible;
+}
+
+.error {
+  color: hsl(0deg, 100%, 42%);
+
+  visibility: visible;
+}
+
+.form__input--error {
+  border: utility.rem(3) solid hsl(0deg, 100%, 42%);
+
+  visibility: visible;
+}
+
+.error-message {
+  position: absolute;
+
+  margin-block-start: utility.rem(10);
+}

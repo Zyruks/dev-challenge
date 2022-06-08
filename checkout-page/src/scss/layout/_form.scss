@@ -1,0 +1,156 @@
+@use "../utility";
+
+/* ******************* *\
+? #Form 
+\* ******************* */
+.form {
+  position: relative;
+}
+
+.form__fieldset {
+  padding-block-end: utility.rem(30);
+
+  border: none;
+}
+
+.form__legend {
+  padding: 0;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block-end: utility.rem(16);
+  inline-size: 100%;
+  padding-block-end: utility.rem(16);
+}
+
+.form__label {
+  padding-block-end: utility.rem(8);
+
+  inline-size: 100%;
+}
+
+.input-box {
+  position: relative;
+
+  inline-size: 100%;
+}
+
+.form__input {
+  display: block;
+  padding: utility.rem(10);
+  border: utility.rem(1.5) solid var(--faded-color);
+  border-radius: utility.rem(10);
+
+  padding-inline-start: utility.rem(36);
+
+  inline-size: 100%;
+
+  &:focus {
+    border: utility.rem(3) solid var(--accent-color);
+
+    outline: none;
+  }
+  @include utility.breakpoint(large) {
+    padding-inline-start: utility.rem(50);
+  }
+}
+
+/* ******************* *\
+? #Form  End
+\* ******************* */
+
+.icon {
+  position: absolute;
+  inset-block-start: 22%;
+
+  inset-inline-start: utility.rem(6);
+  @include utility.breakpoint(large) {
+    inset-block-start: 14%;
+  }
+}
+
+// Change color for icon with the focus of input
+.form__input:focus ~ .icon--focus {
+  color: var(--accent-color);
+}
+
+.double-container {
+  display: flex;
+  gap: utility.rem(24);
+  inline-size: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: utility.rem(6);
+  align-items: center;
+  margin-inline-start: utility.rem(8);
+}
+
+.submit-btn {
+  position: absolute;
+  inset-inline-end: 5%;
+
+  padding: utility.rem(13) utility.rem(40);
+  border: none;
+  border-radius: utility.rem(10);
+
+  background-color: var(--accent-color);
+
+  @include utility.breakpoint(large) {
+    inset-inline-end: 0%;
+  }
+
+  &:hover {
+    background-color: var(--accent-dark);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 utility.rem(28) 0 rgba(0, 0, 0, 50%);
+  }
+}
+
+.checkbox-input {
+  display: inline-block;
+  margin: 0 utility.rem(3.2) utility.rem(6.4) 0;
+
+  border: utility.rem(1) solid hsl(0deg, 0%, 51%);
+  border-radius: utility.rem(4);
+
+  outline: none;
+
+  transition: box-shadow 200ms;
+
+  appearance: none;
+
+  min-block-size: utility.rem(21);
+  min-inline-size: utility.rem(21);
+  margin-block-start: utility.rem(6);
+}
+
+.checkbox-input:checked {
+  border-color: hsl(28deg, 87%, 62%);
+
+  background-color: hsl(28deg, 87%, 62%);
+}
+
+.checkbox-input:checked::before {
+  display: block;
+  inline-size: utility.rem(6);
+  block-size: utility.rem(12);
+  margin-block-start: utility.rem(2);
+  margin-inline-start: utility.rem(7);
+
+  border: solid hsl(0deg, 0%, 100%);
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+
+  content: "";
+}
+
+.location {
+  background-color: hsl(0deg, 0%, 100%);
+}

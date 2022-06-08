@@ -1,0 +1,45 @@
+@use "../utility";
+
+.modal {
+  border: none;
+
+  box-shadow: 0 0 utility.rem(39) utility.rem(-4) rgba(0, 0, 0, 10%);
+  padding-block: utility.rem(8);
+  padding-inline: utility.rem(8);
+
+  inline-size: utility.rem(400);
+  block-size: utility.rem(300);
+
+  &::backdrop {
+    background: rgb(20, 20, 20);
+    opacity: 20%;
+  }
+}
+
+.modal_icon {
+  margin-block-start: utility.rem(80);
+
+  color: hsl(120deg, 61%, 50%);
+  font-size: utility.rem(80);
+  text-align: center;
+  inline-size: 100%;
+}
+
+.modal_text {
+  margin-block: utility.rem(16);
+
+  text-align: center;
+}
+
+.modal__btn-close {
+  position: absolute;
+  margin-block-end: utility.rem(40);
+
+  inset-inline-end: 5%;
+
+  border: none;
+
+  font-size: utility.rem(48);
+
+  background: none;
+}

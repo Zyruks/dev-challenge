@@ -1,0 +1,12 @@
+// !Don't Use SCSS or SASS Variables, use the CSS Variables insted
+
+:root {
+  --primary-text: hsl(160deg, 2%, 31%); // #4E5150
+  --secondary-text: hsl(0deg, 0%, 20%); // #333
+  --third-text: hsl(0deg, 0%, 31%); // #4f4f4f
+  --faded-color: hsl(0deg, 0%, 51%); // #828282
+  --background-color: hsl(0deg, 0%, 95%); // #f2f2f2
+  --accent-color: hsl(28deg, 87%, 62%); // #f2984a
+  --accent-dark: hsl(28deg, 87%, 50%);
+  --btn-color: hsl(0deg, 0%, 88%);
+}

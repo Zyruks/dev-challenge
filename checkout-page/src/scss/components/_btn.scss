@@ -1,0 +1,11 @@
+.btn {
+  &:hover {
+    color: hsl(0deg, 0%, 100%);
+
+    background-color: var(--accent-color);
+  }
+
+  &:active {
+    background-color: var(--accent-dark);
+  }
+}

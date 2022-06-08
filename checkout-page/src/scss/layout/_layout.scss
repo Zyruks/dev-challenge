@@ -1,0 +1,34 @@
+@use "../utility";
+
+.super-container {
+  display: grid;
+  grid-template-areas: "header" "shopping-cart" "main" "footer";
+  grid-template-rows: 0.1fr 0.5fr 1fr 0.1fr;
+  @include utility.breakpoint(large) {
+    grid-template-areas: "header header header" "main main shopping-cart" "footer footer footer";
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-inline-size: utility.rem(1200);
+    margin: 0 auto;
+  }
+}
+
+.main-title {
+  grid-area: header;
+  margin-block-start: utility.rem(10);
+  margin-inline-start: utility.rem(10);
+}
+
+.container {
+  grid-area: main;
+}
+
+.shopping-cart {
+  grid-area: shopping-cart;
+  margin-inline: utility.rem(10);
+}
+
+.footer {
+  grid-area: footer;
+  margin-block-start: utility.rem(70);
+}
