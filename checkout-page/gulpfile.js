@@ -1,14 +1,18 @@
-// list of dependences
+// list of dependence
 const { src, dest, watch, series } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const browserSync = require("browser-sync").create();
+const htmlMinifier = require("gulp-htmlmin");
 
+exports.compileJs = compileJs;
 //HTML Function
 function compilehtml() {
-  return src("src/**/*.html").pipe(dest("public"));
+  return src("src/**/*.html")
+    .pipe(htmlMinifier({ collapseWhitespace: true }))
+    .pipe(dest("public"));
 }
 
 //SCSS Function
