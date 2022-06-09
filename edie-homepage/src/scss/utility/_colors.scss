@@ -1,12 +1,13 @@
 // !Don't Use SCSS or SASS Variables, use the CSS Variables insted
 
 :root {
-  --primary-text: hsl(160deg, 2%, 31%); // #4E5150
-  --secondary-text: hsl(0deg, 0%, 20%); // #333
-  --third-text: hsl(0deg, 0%, 31%); // #4f4f4f
-  --faded-color: hsl(0deg, 0%, 51%); // #828282
-  --background-color: hsl(0deg, 0%, 95%); // #f2f2f2
-  --accent-color: hsl(28deg, 87%, 62%); // #f2984a
-  --accent-dark: hsl(28deg, 87%, 50%);
-  --btn-color: hsl(0deg, 0%, 88%);
+  --primary-text: hsl(0deg, 0%, 20%); // #333333
+  --secondary-text: hsl(0deg, 0%, 31%); // #4F4F4F
+  --background-color: hsl(0deg, 0%, 88%); // #E0E0E0
+  --btn-text: hsl(0deg, 0%, 51%); // #828282
+  --faded-text: hsl(0deg, 0%, 74%); // #BDBDBD
+  --white-color: hsl(0deg, 0%, 100%); // #FFFFFF
+  --accent-color: hsl(202deg, 71%, 52%); // #2D9CDB
+  --accent-color-2: hsl(0deg, 79%, 63%); // #EB5757
+  --accent-color-3: hsl(145deg, 63%, 42%); // #27AE60
 }
