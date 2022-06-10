@@ -1,3 +1,5 @@
+@use "../utility";
+
 html {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  margin: utility.rem(16);
   padding: 0;
 }
 

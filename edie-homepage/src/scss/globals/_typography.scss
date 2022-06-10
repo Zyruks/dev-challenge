@@ -4,7 +4,7 @@ body {
   font-weight: 600;
 
   /* Extend `.$font` in utility/_fonts.scss */
-  font-family: utility.$font;
+  font-family: utility.$font-poppins;
 }
 
 h1,
@@ -19,6 +19,7 @@ h3 {
 a,
 a:visited,
 a:active {
+  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -26,3 +27,104 @@ h4 {
   margin-block: 0;
   margin-inline: 0;
 }
+
+/* ******************* *\
+#Main Typography
+\* ******************* */
+.sub-title {
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: utility.rem(12);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(14);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+}
+
+.big-title,
+.another-title {
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: utility.rem(24);
+  line-height: utility.rem(36);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(30);
+    line-height: utility.rem(50);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(36);
+    line-height: utility.rem(50);
+  }
+}
+
+.main-paragraph {
+  font-weight: 400;
+  font-size: utility.rem(12);
+  line-height: utility.rem(18);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(14);
+  }
+}
+
+.contact-you__title {
+  color: var(--btn-text);
+  font-weight: 500;
+  font-size: utility.rem(10);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(12);
+  }
+}
+
+.contact-you__input {
+  &:placeholder-shown {
+    color: var(--btn-text);
+    font-weight: 500;
+    font-size: utility.rem(14);
+  }
+}
+
+.contact-you__mini-btn {
+  color: var(--white-color);
+}
+
+/* ******************* *\
+#Main Typography End
+\* ******************* */
+
+/* ******************* *\
+#Menu Typography
+\* ******************* */
+.logo a {
+  font-weight: 800;
+  font-size: utility.rem(24);
+  font-family: utility.$font-heebo;
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(28);
+  }
+
+  /* Extend `.breakpoint()` in utility/_breakpoint.scss */
+}
+
+.menu__item {
+  color: var(--primary-text);
+  font-weight: 500;
+  font-size: utility.rem(28);
+
+  &:hover {
+    color: var(--accent-color);
+
+    padding-block-end: utility.rem(4.8);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(20);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(24);
+  }
+}
+
+/* ******************* *\
+#Menu Typography End
+\* ******************* */

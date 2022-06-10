@@ -1,5 +1,139 @@
 @use "../utility";
 
 .super-container {
-  margin: utility.rem(16);
+  max-inline-size: utility.rem(1440);
+  min-inline-size: utility.rem(375);
+
+  margin: auto;
+
+  overflow: hidden;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  inline-size: 100%;
+  margin-block-start: utility.rem(50);
+}
+
+/* ******************* *\
+#Main 
+\* ******************* */
+.sub-title {
+  margin-inline-start: 5%;
+
+  min-inline-size: 100%;
+  @include utility.breakpoint(medium) {
+    margin-block-end: utility.rem(10);
+  }
+  @include utility.breakpoint(large) {
+    margin-inline-start: 15%;
+  }
+}
+
+.big-title,
+.another-title {
+  margin-inline-start: 5%;
+
+  inline-size: utility.rem(280);
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(350);
+  }
+  @include utility.breakpoint(large) {
+    margin-inline-start: 15%;
+    inline-size: utility.rem(430);
+  }
+}
+
+.another-title {
+  inline-size: utility.rem(200);
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(220);
+  }
+  @include utility.breakpoint(large) {
+    margin-inline-start: 15%;
+    inline-size: utility.rem(280);
+  }
+}
+
+.hero-img {
+  inline-size: 100%;
+  block-size: utility.rem(145);
+  margin-block: utility.rem(28);
+
+  border-radius: utility.rem(16);
+  @include utility.breakpoint(large) {
+    block-size: 100%;
+    margin-block: utility.rem(0);
+    margin-block-end: utility.rem(12);
+  }
+}
+
+.main-paragraph {
+  margin-block-start: utility.rem(6);
+  inline-size: utility.rem(320);
+  margin-block-end: utility.rem(24);
+  margin-inline-start: 5%;
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(220);
+  }
+  @include utility.breakpoint(large) {
+    margin-inline-start: 15%;
+    inline-size: utility.rem(350);
+  }
+}
+
+.contact-you {
+  position: relative;
+  margin-inline-start: 5%;
+  inline-size: utility.rem(320);
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(220);
+  }
+  @include utility.breakpoint(large) {
+    inline-size: utility.rem(350);
+    margin-inline-start: 15%;
+  }
+}
+
+.contact-you__title {
+  margin-block-end: utility.rem(16);
+}
+
+.contact-you__input {
+  inline-size: 100%;
+
+  padding: utility.rem(24);
+  border: none;
+  border-radius: utility.rem(14);
+
+  background-color: var(--btn-bgcolor);
+  outline: none;
+  @include utility.breakpoint(medium) {
+    padding: utility.rem(14);
+  }
+}
+
+.contact-you__mini-btn {
+  position: absolute;
+  inset-block-start: utility.rem(36);
+  inset-inline-end: utility.rem(4);
+
+  padding: utility.rem(16) utility.rem(30);
+  border-radius: utility.rem(10);
+
+  background-color: var(--accent-color);
+  @include utility.breakpoint(medium) {
+    padding: utility.rem(6) utility.rem(30);
+    inset-block-start: utility.rem(40);
+  }
+  @include utility.breakpoint(large) {
+    padding: utility.rem(8) utility.rem(30);
+    inset-block-start: utility.rem(37);
+  }
+}
+
+/* ******************* *\
+#Main End
+\* ******************* */
