@@ -29,6 +29,9 @@ exports.compilescss = compilescss;
 function compilepng() {
   return src("src/assets/**/*.png").pipe(dest("public/assets/"));
 }
+function compileJpg() {
+  return src("src/assets/**/*.jpg").pipe(dest("public/assets/"));
+}
 
 function compilesvg() {
   return src("src/assets/**/*.svg").pipe(dest("public/assets/"));
@@ -77,6 +80,7 @@ exports.default = series(
   compilescss,
   compilepng,
   compileJs,
+  compileJpg,
   compilesvg,
   browsersyncServer,
   browserSyncReload,
