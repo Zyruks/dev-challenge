@@ -41,10 +41,14 @@ h4 {
   @include utility.breakpoint(large) {
     font-size: utility.rem(16);
   }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(18);
+  }
 }
 
 .big-title,
-.another-title {
+.another-title,
+.section__title {
   color: var(--primary-text);
   font-weight: 500;
   font-size: utility.rem(24);
@@ -55,7 +59,11 @@ h4 {
   }
   @include utility.breakpoint(large) {
     font-size: utility.rem(36);
-    line-height: utility.rem(50);
+    line-height: utility.rem(60);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(48);
+    line-height: utility.rem(72);
   }
 }
 
@@ -65,6 +73,12 @@ h4 {
   line-height: utility.rem(18);
   @include utility.breakpoint(medium) {
     font-size: utility.rem(14);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(16);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(18);
   }
 }
 
@@ -91,6 +105,42 @@ h4 {
 
 /* ******************* *\
 #Main Typography End
+\* ******************* */
+
+/* ******************* *\
+#Services Typography
+\* ******************* */
+.section__title {
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(36);
+    line-height: utility.rem(54);
+  }
+}
+
+.card__icon {
+  color: var(--white-color);
+  font-size: utility.rem(40);
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: utility.rem(24);
+}
+
+.card__paragraph {
+  font-weight: 400;
+  font-size: utility.rem(16);
+  line-height: utility.rem(24);
+}
+
+.card__btn {
+  color: var(--btn-text);
+  font-weight: 500;
+  font-size: utility.rem(16);
+}
+
+/* ******************* *\
+#Services Typography End
 \* ******************* */
 
 /* ******************* *\
