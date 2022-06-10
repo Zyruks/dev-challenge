@@ -2,11 +2,8 @@
 
 .super-container {
   max-inline-size: utility.rem(1440);
-  min-inline-size: utility.rem(375);
 
-  margin: auto;
-
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 .main-container {
@@ -23,37 +20,49 @@
 .sub-title {
   margin-inline-start: 5%;
 
-  min-inline-size: 100%;
+  min-inline-size: 95%;
+
   @include utility.breakpoint(medium) {
     margin-block-end: utility.rem(10);
   }
   @include utility.breakpoint(large) {
     margin-inline-start: 15%;
+    min-inline-size: 85%;
   }
 }
 
 .big-title,
 .another-title {
   margin-inline-start: 5%;
-
-  inline-size: utility.rem(280);
+  margin-block: 0;
+  inline-size: 95%;
+  max-inline-size: utility.rem(280);
   @include utility.breakpoint(medium) {
     inline-size: utility.rem(350);
   }
   @include utility.breakpoint(large) {
     margin-inline-start: 15%;
-    inline-size: utility.rem(430);
+    inline-size: 85%;
+
+    max-inline-size: utility.rem(430);
+  }
+  @include utility.breakpoint(x-large) {
+    max-inline-size: utility.rem(530);
   }
 }
 
 .another-title {
-  inline-size: utility.rem(200);
+  max-inline-size: utility.rem(225);
   @include utility.breakpoint(medium) {
     inline-size: utility.rem(220);
   }
   @include utility.breakpoint(large) {
     margin-inline-start: 15%;
-    inline-size: utility.rem(280);
+    inline-size: 85%;
+    max-inline-size: utility.rem(330);
+  }
+  @include utility.breakpoint(x-large) {
+    max-inline-size: utility.rem(350);
   }
 }
 
@@ -65,14 +74,13 @@
   border-radius: utility.rem(16);
   @include utility.breakpoint(large) {
     block-size: 100%;
-    margin-block: utility.rem(0);
-    margin-block-end: utility.rem(12);
+    margin-block: utility.rem(40);
   }
 }
 
 .main-paragraph {
   margin-block-start: utility.rem(6);
-  inline-size: utility.rem(320);
+  inline-size: 95%;
   margin-block-end: utility.rem(24);
   margin-inline-start: 5%;
   @include utility.breakpoint(medium) {
@@ -87,12 +95,12 @@
 .contact-you {
   position: relative;
   margin-inline-start: 5%;
-  inline-size: utility.rem(320);
+  inline-size: 95%;
   @include utility.breakpoint(medium) {
     inline-size: utility.rem(220);
   }
   @include utility.breakpoint(large) {
-    inline-size: utility.rem(350);
+    inline-size: utility.rem(360);
     margin-inline-start: 15%;
   }
 }
@@ -136,4 +144,129 @@
 
 /* ******************* *\
 #Main End
+\* ******************* */
+
+/* ******************* *\
+#Services 
+\* ******************* */
+.services {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  inline-size: 95%;
+}
+
+.section__title {
+  margin-block: utility.rem(120);
+
+  margin: 0;
+  inline-size: 95%;
+  max-inline-size: utility.rem(315);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: utility.rem(24);
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-inline-size: utility.rem(1440);
+
+  @include utility.breakpoint(large) {
+    flex-direction: row;
+    margin-inline: utility.rem(16);
+
+    justify-content: space-between;
+  }
+  @include utility.breakpoint(x-large) {
+    margin-inline: utility.rem(50);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: utility.rem(32);
+  align-items: flex-start;
+  padding: utility.rem(36) utility.rem(24);
+  border-radius: utility.rem(10);
+  block-size: utility.rem(422);
+
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+
+  @include utility.breakpoint(large) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.8px rgba(0, 0, 0, 1.8%), 0 0 3.3px rgba(0, 0, 0, 2.4%),
+      0 0 8.2px rgba(0, 0, 0, 2.7%), 0 0 16.5px rgba(0, 0, 0, 2.9%),
+      0 0 30.4px rgba(0, 0, 0, 3.2%), 0 0 55.7px rgba(0, 0, 0, 3.8%),
+      0 0 133px rgba(0, 0, 0, 6%);
+
+    // This selection make the .card__btn change color with he hover of .card
+    & > .card__btn {
+      color: var(--white-color);
+
+      background-color: var(--accent-color);
+    }
+  }
+
+  @include utility.breakpoint(medium) {
+    inline-size: 100%;
+  }
+  @include utility.breakpoint(large) {
+    block-size: 100%;
+
+    max-inline-size: utility.rem(360);
+  }
+}
+
+.card__icon {
+  margin: 0;
+  padding: utility.rem(14);
+  border-radius: utility.rem(16);
+
+  background-color: var(--accent-color);
+}
+
+.card__icon--green {
+  background-color: var(--accent-color-3);
+}
+
+.card__icon--red {
+  background-color: var(--accent-color-2);
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__paragraph {
+  margin: 0;
+  inline-size: 80%;
+
+  @include utility.breakpoint(medium) {
+    inline-size: utility.rem(300);
+  }
+  @include utility.breakpoint(large) {
+    inline-size: 80%;
+  }
+}
+
+.card__btn {
+  padding: utility.rem(8) utility.rem(12);
+  border: none;
+  border-radius: utility.rem(10);
+
+  background-color: var(--btn-bgcolor);
+
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+/* ******************* *\
+#Services  End
 \* ******************* */
