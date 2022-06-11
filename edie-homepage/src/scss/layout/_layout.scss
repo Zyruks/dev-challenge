@@ -426,6 +426,7 @@
   inline-size: 95%;
   @include utility.breakpoint(medium) {
     align-items: flex-start;
+    margin-block-start: utility.rem(250);
   }
 
   @include utility.breakpoint(large) {
@@ -512,7 +513,7 @@
   margin: 0;
   margin-block-end: utility.rem(100);
   @include utility.breakpoint(large) {
-    inline-size: 35%;
+    inline-size: 30%;
   }
 }
 
