@@ -20,12 +20,6 @@
   }
 }
 
-.logo {
-  border: utility.rem(1) solid hsl(0deg, 0%, 100%);
-
-  /* Extend `.rem()` in utility/_function.scss */
-}
-
 // Opacity for Logo when active menu mobile
 .logo--opacity {
   opacity: 0%;
