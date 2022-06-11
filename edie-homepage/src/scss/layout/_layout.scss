@@ -345,5 +345,71 @@
 }
 
 /* ******************* *\
-#Project  End
+#project  End
+\* ******************* */
+
+/* ******************* *\
+#team
+\* ******************* */
+.team {
+  inline-size: 100%;
+  margin-block: utility.rem(100);
+
+  display: flex;
+  flex-direction: column;
+  gap: utility.rem(24);
+  @include utility.breakpoint(large) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.section__paragraph {
+  max-inline-size: utility.rem(250);
+}
+
+.team__grid {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
+  gap: utility.rem(16);
+  align-self: center;
+  inline-size: 100%;
+  @include utility.breakpoint(large) {
+    inline-size: 50%;
+  }
+}
+
+.team__person-1 {
+  inline-size: 85%;
+}
+
+.team__person-1,
+.team__person-2 {
+  grid-column: 2;
+}
+
+.team__person-3 {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: flex-end;
+
+  transform: translateY(utility.rem(-120));
+
+  transition: transform 300ms ease-in-out;
+
+  @include utility.breakpoint-down(small) {
+    transform: translateY(utility.rem(-80));
+  }
+  @include utility.breakpoint(large) {
+    transform: translateY(utility.rem(-80));
+  }
+  @include utility.breakpoint(x-large) {
+    transform: translateY(utility.rem(-120));
+  }
+}
+
+/* ******************* *\
+#team  End
 \* ******************* */
