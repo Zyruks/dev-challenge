@@ -202,17 +202,13 @@
   }
 
   &:hover {
-    box-shadow: 0 0 0.8px rgba(0, 0, 0, 1.8%), 0 0 3.3px rgba(0, 0, 0, 2.4%),
-      0 0 8.2px rgba(0, 0, 0, 2.7%), 0 0 16.5px rgba(0, 0, 0, 2.9%),
-      0 0 30.4px rgba(0, 0, 0, 3.2%), 0 0 55.7px rgba(0, 0, 0, 3.8%),
-      0 0 133px rgba(0, 0, 0, 6%);
-
-    // This selection make the .card__btn change color with he hover of .card
-    & > .card__btn {
-      color: var(--white-color);
-
-      background-color: var(--accent-color);
-    }
+    box-shadow: 0 0 utility.rem(0.8) rgba(0, 0, 0, 1.8%),
+      0 0 utility.rem(3.3) rgba(0, 0, 0, 2.4%),
+      0 0 utility.rem(8.2) rgba(0, 0, 0, 2.7%),
+      0 0 utility.rem(16.5) rgba(0, 0, 0, 2.9%),
+      0 0 utility.rem(30.4) rgba(0, 0, 0, 3.2%),
+      0 0 utility.rem(55.7) rgba(0, 0, 0, 3.8%),
+      0 0 utility.rem(133) rgba(0, 0, 0, 6%);
   }
 
   @include utility.breakpoint(medium) {
@@ -265,6 +261,13 @@
   background-color: var(--btn-bgcolor);
 
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+// This selection make the .card__btn change color with he hover of .card
+.card:hover > .card__btn {
+  color: var(--white-color);
+
+  background-color: var(--accent-color);
 }
 
 /* ******************* *\
