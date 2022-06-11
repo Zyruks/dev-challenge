@@ -280,3 +280,37 @@ h4 {
 /* ******************* *\
 #client Typography End
 \* ******************* */
+
+/* ******************* *\
+#footer Typography 
+\* ******************* */
+.footer-nav__items {
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: utility.rem(18);
+  line-height: utility.rem(36);
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.footer-logo a {
+  color: var(--btn-bgcolor);
+  font-size: utility.rem(36);
+}
+
+.footer__paragraph {
+  color: var(--btn-bgcolor);
+  font-weight: 500;
+  font-size: utility.rem(14);
+}
+
+.footer__paragraph .footer__link {
+  color: var(--btn-bgcolor);
+  font-weight: 700;
+}
+
+/* ******************* *\
+#footer Typography End
+\* ******************* */
