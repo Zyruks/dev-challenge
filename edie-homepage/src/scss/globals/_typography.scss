@@ -75,6 +75,7 @@ h4 {
   }
   @include utility.breakpoint(large) {
     font-size: utility.rem(16);
+    line-height: utility.rem(27);
   }
   @include utility.breakpoint(x-large) {
     font-size: utility.rem(18);
