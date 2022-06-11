@@ -361,6 +361,7 @@
   @include utility.breakpoint(large) {
     flex-direction: row;
     align-items: center;
+
     justify-content: space-around;
   }
 }
@@ -412,4 +413,61 @@
 
 /* ******************* *\
 #team  End
+\* ******************* */
+
+/* ******************* *\
+#client-reviews 
+\* ******************* */
+.client-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: utility.rem(32);
+  align-items: center;
+  inline-size: 95%;
+  @include utility.breakpoint(medium) {
+    align-items: flex-start;
+  }
+
+  @include utility.breakpoint(large) {
+    margin-inline-start: 5%;
+  }
+}
+
+.client-reviews__review {
+  margin: 0;
+  inline-size: 100%;
+  max-inline-size: utility.rem(351);
+
+  @include utility.breakpoint(medium) {
+    max-inline-size: utility.rem(620);
+  }
+}
+
+.client-reviews__client-info {
+  display: flex;
+  gap: utility.rem(16);
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.client-reviews__img {
+  inline-size: 30%;
+  max-inline-size: utility.rem(120);
+
+  border-radius: utility.rem(16);
+}
+
+.client-reviews__name {
+  margin-block: utility.rem(4);
+  @include utility.breakpoint(large) {
+    margin-block: utility.rem(10);
+  }
+}
+
+.client-reviews__business {
+  inline-size: 100%;
+}
+
+/* ******************* *\
+#client-reviews  End
 \* ******************* */
