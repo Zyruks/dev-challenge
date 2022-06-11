@@ -159,6 +159,7 @@
 
 .section__title {
   margin-block: utility.rem(120);
+  margin-inline-start: 5%;
 
   margin: 0;
   inline-size: 95%;
@@ -272,4 +273,77 @@
 
 /* ******************* *\
 #Services  End
+\* ******************* */
+
+/* ******************* *\
+#Project  
+\* ******************* */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  inline-size: 95%;
+}
+
+.projects-container {
+  @include utility.breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    margin-inline-start: 5%;
+  }
+  @include utility.breakpoint(large) {
+    gap: utility.rem(22);
+    justify-content: space-around;
+  }
+}
+
+// change size for .section__title inside project-section
+.project-section > .section__title {
+  margin-block-end: utility.rem(40);
+  @include utility.breakpoint(medium) {
+    max-inline-size: utility.rem(380);
+    margin-block: utility.rem(120);
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: utility.rem(28);
+
+  @include utility.breakpoint(medium) {
+    inline-size: 47%;
+
+    &:nth-child(2),
+    &:nth-child(4) {
+      transform: translateY(utility.rem(-120));
+    }
+  }
+  @include utility.breakpoint(large) {
+    inline-size: 47%;
+  }
+}
+
+.project__img {
+  inline-size: 100%;
+
+  border-radius: utility.rem(24);
+}
+
+.project__sub-title {
+  margin-block-start: utility.rem(24);
+}
+
+.section-link {
+  @include utility.breakpoint(medium) {
+    align-self: flex-end;
+    margin-inline-end: 12%;
+  }
+}
+
+/* ******************* *\
+#Project  End
 \* ******************* */
