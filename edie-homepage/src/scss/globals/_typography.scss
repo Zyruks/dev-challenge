@@ -19,7 +19,6 @@ h3 {
 a,
 a:visited,
 a:active {
-  color: var(--primary-text);
   text-decoration: none;
 }
 
@@ -147,6 +146,7 @@ h4 {
 #Menu Typography
 \* ******************* */
 .logo a {
+  color: var(--primary-text);
   font-weight: 800;
   font-size: utility.rem(24);
   font-family: utility.$font-heebo;
@@ -177,4 +177,52 @@ h4 {
 
 /* ******************* *\
 #Menu Typography End
+\* ******************* */
+
+/* ******************* *\
+#Projects Typography 
+\* ******************* */
+.project-section > .section__title {
+  max-inline-size: utility.rem(250);
+}
+
+.project__sub-title {
+  color: var(--btn-text);
+  font-weight: 300;
+  font-size: utility.rem(12);
+  line-height: utility.rem(18);
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(14);
+  }
+}
+
+.project__title,
+.section-link {
+  font-weight: 500;
+  font-size: utility.rem(18);
+  line-height: utility.rem(27);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(14);
+    letter-spacing: utility.rem(-0.5);
+  }
+  @include utility.breakpoint(large) {
+    font-size: utility.rem(20);
+  }
+  @include utility.breakpoint(x-large) {
+    font-size: utility.rem(24);
+  }
+}
+
+.section-link {
+  color: var(--accent-color);
+
+  transition: color 300ms ease-in-out;
+
+  &:hover {
+    color: var(--secondary-text);
+  }
+}
+
+/* ******************* *\
+#Projects Typography End
 \* ******************* */
