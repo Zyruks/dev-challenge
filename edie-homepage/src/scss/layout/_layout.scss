@@ -471,3 +471,60 @@
 /* ******************* *\
 #client-reviews  End
 \* ******************* */
+
+/* ******************* *\
+#footer
+\* ******************* */
+.footer {
+  margin-inline: utility.rem(-16);
+  margin-block-end: utility.rem(-16);
+  margin-block-start: utility.rem(80);
+
+  background-color: var(--footer-bg);
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: utility.rem(80);
+  overflow: hidden;
+  padding-block-start: utility.rem(32);
+  margin-inline-start: utility.rem(38);
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  @include utility.breakpoint(large) {
+    inline-size: 30%;
+  }
+}
+
+.social-container {
+  display: flex;
+  gap: utility.rem(10);
+  align-items: center;
+}
+
+.footer__contact-you {
+  margin: 0;
+  margin-block-end: utility.rem(100);
+  @include utility.breakpoint(large) {
+    inline-size: 35%;
+  }
+}
+
+.footer__contact-btn {
+  inset-block-start: utility.rem(36);
+}
+
+.footer__paragraph {
+  text-align: center;
+  inline-size: 100%;
+}
+
+/* ******************* *\
+#footer  end
+\* ******************* */
