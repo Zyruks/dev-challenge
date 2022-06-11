@@ -226,3 +226,25 @@ h4 {
 /* ******************* *\
 #Projects Typography End
 \* ******************* */
+
+/* ******************* *\
+#team Typography 
+\* ******************* */
+
+.team__sub-title {
+  color: var(--accent-color-2);
+  font-weight: 500;
+  font-size: utility.rem(18);
+  line-height: utility.rem(27);
+}
+
+.team__title {
+  font-weight: 500;
+  font-size: utility.rem(36);
+  line-height: utility.rem(54);
+  max-inline-size: utility.rem(300);
+}
+
+/* ******************* *\
+#team Typography End
+\* ******************* */
