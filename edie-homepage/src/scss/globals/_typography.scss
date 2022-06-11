@@ -248,3 +248,35 @@ h4 {
 /* ******************* *\
 #team Typography End
 \* ******************* */
+
+/* ******************* *\
+#client Typography 
+\* ******************* */
+.client-reviews__review {
+  font-weight: 500;
+  font-size: utility.rem(20);
+  line-height: utility.rem(36);
+  letter-spacing: utility.rem(-1);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(24);
+    letter-spacing: utility.rem(0);
+  }
+}
+
+.client-reviews__name {
+  font-weight: 500;
+  font-size: utility.rem(24);
+}
+
+.client-reviews__business {
+  color: var(--btn-text);
+  font-weight: 500;
+  font-size: utility.rem(14);
+  @include utility.breakpoint(medium) {
+    font-size: utility.rem(18);
+  }
+}
+
+/* ******************* *\
+#client Typography End
+\* ******************* */
