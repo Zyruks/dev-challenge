@@ -18,3 +18,5 @@ Basics responsive **HTML/SCSS/JS** websites and pages
 - Challenge 4 : [**"My Gallery"**](https://github.com/Zyruks/dev-challenge/tree/main/my-gallery)
 
 - Challenge 5 : [**"Recipe Page"**](https://github.com/Zyruks/dev-challenge/tree/main/recipe-page)
+
+- Challenge 5 : [**"Edie homepage"**](https://github.com/Zyruks/dev-challenge/tree/main/edie-homepage)
