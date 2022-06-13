@@ -1,4 +1,4 @@
-<h1 align="center">Edie Homepage</h1>
+<h1 align="center">Portfolio</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>
@@ -14,7 +14,7 @@
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0">
+    <a href="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt">
       Challenge
     </a>
   </h3>
@@ -34,7 +34,7 @@
 
 ## Overview
 
-<div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; ">
 <img src="./screenshots/mobile.png" width="400" title="Screenshot Mobile"/>
 <img src="./screenshots/mobile-menu.png" width="400"  height="800" title="Screenshot Mobile"/>
 <img src="./screenshots/desktop.png" width="600" height="100%" title="Screenshot Desktop"/>
@@ -58,7 +58,7 @@ I worked with mobile first.
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt) was to build an application to complete the given user stories.
 
 ## Acknowledgements
 
