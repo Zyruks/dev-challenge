@@ -1,1 +1,45 @@
-$font: "Montserrat", sans-serif;
+@use "../abstract";
+
+.fs-sm {
+  font-size: clamp(abstract.rem(14), 6vw, abstract.rem(16));
+}
+
+.fs-md {
+  font-size: clamp(abstract.rem(14), 6vw, abstract.rem(18));
+}
+
+.fs-lg {
+  font-size: clamp(abstract.rem(14), 6vw, abstract.rem(24));
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.text-primary {
+  color: var(--primary-text);
+}
+
+.text-secondary {
+  color: var(--secondary-text);
+}
+
+.bg-primary {
+  color: var(--accent-color);
+}
+
+.text-tertiary {
+  color: var(--component-title);
+}
+
+.text-white {
+  color: hsl(0deg, 0%, 100%);
+}

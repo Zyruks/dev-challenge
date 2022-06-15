@@ -1,0 +1,69 @@
+@use "../abstract";
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-bottom-sm {
+  margin-block-end: abstract.rem(10);
+}
+
+.margin-bottom-md {
+  margin-block-end: abstract.rem(14);
+}
+
+.margin-bottom-lg {
+  margin-block-end: abstract.rem(18);
+}
+
+.margin-bottom-xlg {
+  margin-block-end: abstract.rem(24);
+}
+
+.margin-top-sm {
+  margin-block-start: abstract.rem(10);
+}
+
+.margin-top-md {
+  margin-block-start: abstract.rem(14);
+}
+
+.margin-top-lg {
+  margin-block-start: abstract.rem(18);
+}
+
+.margin-top-xlg {
+  margin-block-start: abstract.rem(24);
+}
+
+.margin-right-sm {
+  margin-inline-end: abstract.rem(10);
+}
+
+.margin-right-md {
+  margin-inline-end: abstract.rem(14);
+}
+
+.margin-right-lg {
+  margin-inline-end: abstract.rem(18);
+}
+
+.margin-right-xlg {
+  margin-inline-end: abstract.rem(24);
+}
+
+.margin-left-sm {
+  margin-inline-start: abstract.rem(10);
+}
+
+.margin-left-md {
+  margin-inline-start: abstract.rem(14);
+}
+
+.margin-left-lg {
+  margin-inline-start: abstract.rem(18);
+}
+
+.margin-left-xlg {
+  margin-inline-start: abstract.rem(24);
+}
