@@ -1,0 +1,47 @@
+@use "../abstract";
+
+.profile {
+  max-inline-size: abstract.rem(395);
+  @include abstract.breakpoint(large) {
+    max-inline-size: 100%;
+  }
+}
+
+.title__name {
+  margin: 0;
+
+  margin-block-end: abstract.rem(6);
+
+  @include abstract.breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.title__job {
+  margin-block-end: abstract.rem(32);
+  @include abstract.breakpoint(large) {
+    margin: 0;
+    margin-block-start: abstract.rem(12);
+  }
+}
+
+.info-container {
+  display: flex;
+  gap: abstract.rem(16);
+  align-items: flex-start;
+  margin-block-end: abstract.rem(12);
+  @include abstract.breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.personal__paragraph {
+  margin-block-start: abstract.rem(30);
+
+  max-inline-size: abstract.rem(300);
+
+  @include abstract.breakpoint(large) {
+    margin-block-start: abstract.rem(0);
+    max-inline-size: 100%;
+  }
+}
