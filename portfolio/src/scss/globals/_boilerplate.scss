@@ -1,4 +1,4 @@
-@use "../utility";
+@use "../abstract";
 
 html {
   box-sizing: border-box;
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  margin: utility.rem(16);
+  margin: abstract.rem(16);
   padding: 0;
 }
 

@@ -1,10 +1,10 @@
-@use "../utility";
+@use "../abstract";
 
 body {
   font-weight: 600;
 
-  /* Extend `.$font` in utility/_fonts.scss */
-  font-family: utility.$font-poppins;
+  /* Extend `.$font` in abstract/_fonts.scss */
+  font-family: abstract.$font;
 }
 
 h1,
@@ -31,7 +31,49 @@ h4 {
 #main typography
 \* ******************* */
 
+.title__job,
+.personal__paragraph {
+  line-height: abstract.rem(21.94);
+}
+
+.component-paragraph {
+  text-align: justify;
+}
 
 /* ******************* *\
 #main typography end
+\* ******************* */
+
+/* ******************* *\
+#google icon typography 
+\* ******************* */
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+
+  color: var(--primary-text);
+}
+
+/* ******************* *\
+#google icon typography  end
+\* ******************* */
+
+/* ******************* *\
+#components  typography  
+\* ******************* */
+.component-tags,
+.component-paragraph {
+  line-height: abstract.rem(19.5);
+}
+
+.component-title {
+  line-height: abstract.rem(29.26);
+}
+
+.component-btn {
+  line-height: abstract.rem(21.94);
+}
+
+/* ******************* *\
+#components  typography  end
 \* ******************* */

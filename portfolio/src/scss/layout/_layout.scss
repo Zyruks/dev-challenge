@@ -1,8 +1,7 @@
-@use "../utility";
+@use "../abstract";
 
 .super-container {
-  max-inline-size: utility.rem(1440);
+  max-inline-size: abstract.rem(1440);
 
   margin: 0 auto;
 }
-

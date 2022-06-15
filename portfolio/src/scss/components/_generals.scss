@@ -1,0 +1,88 @@
+@use "../abstract";
+
+.component-container {
+  display: flex;
+  flex-direction: column;
+  padding: abstract.rem(20);
+  border-radius: abstract.rem(16);
+  overflow: hidden;
+  margin-block: abstract.rem(32);
+
+  box-shadow: 0 0 abstract.rem(3.7) rgba(0, 0, 0, 16%),
+    0 0 abstract.rem(9.7) rgba(0, 0, 0, 12%),
+    0 0 abstract.rem(17.2) rgba(0, 0, 0, 10.8%),
+    0 0 abstract.rem(27.9) rgba(0, 0, 0, 9.8%),
+    0 0 abstract.rem(42.6) rgba(0, 0, 0, 8.8%),
+    0 0 abstract.rem(64.5) rgba(0, 0, 0, 7.4%),
+    0 0 abstract.rem(127) rgba(0, 0, 0, 5.3%);
+  inline-size: 100%;
+
+  @include abstract.breakpoint(large) {
+    flex-direction: row;
+
+    gap: abstract.rem(28);
+
+    inline-size: 100%;
+    max-inline-size: 100%;
+    block-size: 100%;
+  }
+}
+
+.component-img {
+  inline-size: 100%;
+
+  margin-block-end: abstract.rem(16);
+
+  border-radius: abstract.rem(16);
+  @include abstract.breakpoint(large) {
+    inline-size: 100%;
+  }
+}
+
+.component-text-wrapper {
+  @include abstract.breakpoint(large) {
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: 100%;
+  }
+}
+
+.component-title {
+  margin-block: abstract.rem(16);
+  @include abstract.breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.component-title,
+.btn-container {
+  inline-size: 100%;
+}
+
+.component-paragraph {
+  inline-size: 95%;
+  margin-block-end: abstract.rem(30);
+  @include abstract.breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.component-btn {
+  padding: abstract.rem(10) abstract.rem(36);
+  border: none;
+  border-radius: abstract.rem(10);
+
+  background-color: var(--accent-color);
+  outline: none;
+  @include abstract.breakpoint(large) {
+    margin-block-start: abstract.rem(24);
+  }
+}
+
+.component-btn--invert {
+  border: abstract.rem(1) solid var(--accent-color);
+
+  color: var(--accent-color);
+
+  background-color: hsl(0deg, 0%, 100%);
+}
