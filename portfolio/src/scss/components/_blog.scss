@@ -1,0 +1,49 @@
+@use "../abstract";
+
+.blog {
+  inline-size: 100%;
+  max-inline-size: abstract.rem(500);
+  @include abstract.breakpoint(large) {
+    max-inline-size: 100%;
+  }
+}
+
+.blog__wrapper {
+  grid-template-rows: 0.1fr 1fr 0.5fr 0.1fr;
+  grid-template-columns: 1fr 1fr;
+  @include abstract.breakpoint(large) {
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr;
+  }
+}
+
+.blog__name {
+  grid-row: 1;
+}
+
+.blog__title {
+  grid-row: 2;
+}
+
+.blog__paragraph {
+  grid-row: 3;
+  grid-column: 1 / -1;
+  align-self: center;
+  justify-self: center;
+  @include abstract.breakpoint(large) {
+    grid-row: 3;
+    grid-column: 1;
+    justify-self: flex-start;
+  }
+}
+
+.blog__link {
+  grid-row: 4;
+}
+
+.blog__img {
+  grid-row: 2;
+  grid-column: 2;
+  @include abstract.breakpoint(large) {
+    grid-row: 1 / -1;
+  }
+}
