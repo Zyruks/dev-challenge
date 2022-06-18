@@ -3,6 +3,9 @@
 .experience {
   inline-size: 100%;
   max-inline-size: abstract.rem(395);
+  @include abstract.breakpoint(large) {
+    max-inline-size: 100%;
+  }
 }
 
 .experience__container {
@@ -12,6 +15,21 @@
 
   column-gap: abstract.rem(16);
   margin-block: abstract.rem(16);
+  @include abstract.breakpoint(large) {
+    inline-size: 30%;
+
+    min-inline-size: abstract.rem(258);
+
+    column-gap: abstract.rem(10);
+  }
+}
+
+.experience-wrapper {
+  flex-direction: column;
+  @include abstract.breakpoint(large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .experience__img {
