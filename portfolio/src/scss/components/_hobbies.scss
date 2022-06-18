@@ -1,0 +1,17 @@
+@use "../abstract";
+
+.hobbies {
+  inline-size: 100%;
+  max-inline-size: abstract.rem(395);
+  @include abstract.breakpoint(large) {
+    max-inline-size: 100%;
+  }
+}
+
+.hobbies-wrapper {
+  flex-direction: column;
+  @include abstract.breakpoint(large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
