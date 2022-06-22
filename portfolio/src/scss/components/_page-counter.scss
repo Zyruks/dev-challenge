@@ -1,0 +1,37 @@
+@use "../abstract/" as *;
+
+.page-counter {
+  inline-size: 100%;
+}
+
+.page-counter__btn {
+  border: rem(1) solid var(--primary-text);
+  border-radius: rem(4);
+
+  cursor: pointer;
+  margin-inline: rem(10);
+
+  &:hover {
+    border-color: var(--accent-color);
+
+    color: var(--accent-color);
+  }
+
+  &--active {
+    color: hsl(0deg, 0%, 100%);
+
+    background-color: var(--accent-color);
+
+    &:hover {
+      color: hsl(0deg, 0%, 100%);
+
+      box-shadow: 0 0 rem(51) rem(-28) rgba(0, 0, 0, 46%) inset;
+    }
+  }
+
+  &:active {
+    color: hsl(0deg, 0%, 100%);
+
+    background-color: var(--accent-color);
+  }
+}
