@@ -1,9 +1,77 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .project {
   inline-size: 100%;
-  max-inline-size: abstract.rem(395);
-  @include abstract.breakpoint(large) {
+  max-inline-size: rem(395);
+  @include breakpoint(large) {
     max-inline-size: 100%;
+  }
+}
+
+.super-project {
+  position: relative;
+}
+
+.page-1,
+.page-2,
+.display-none {
+  display: none;
+}
+
+.project-wrapper--active {
+  display: flex;
+}
+
+.active-animation-right {
+  animation: key-slide-in-right 500ms forwards, key-opacity-on 500ms forwards;
+}
+
+.active-animation-left {
+  animation: key-slide-in-left 500ms forwards, key-opacity-on 500ms forwards;
+}
+
+.active-animation-up {
+  animation: key-slide-up 500ms forwards;
+}
+
+@keyframes key-slide-in-right {
+  0% {
+    transform: translateX(rem(400));
+  }
+
+  100% {
+    transform: translateX(rem(0));
+  }
+}
+
+@keyframes key-slide-in-left {
+  0% {
+    transform: translateX(rem(-400));
+  }
+
+  100% {
+    transform: translateX(rem(0));
+  }
+}
+
+@keyframes key-slide-up {
+  0% {
+    transform: translateY(rem(400));
+    opacity: 0%;
+  }
+
+  100% {
+    transform: translateY(rem(0));
+    opacity: 100%;
+  }
+}
+
+@keyframes key-opacity-on {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
