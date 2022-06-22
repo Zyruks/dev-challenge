@@ -1,71 +1,27 @@
-@use "../abstract";
+@use "../abstract" as *;
+@use "sass:string";
 
-.align-top {
-  align-items: flex-start;
-}
+$positions: flex-start, flex-end, center, space-around, space-between,
+  space-evenly;
 
-.align-middle {
-  align-items: center;
-}
+@each $position in $positions {
+  .align-items {
+    &-#{$position} {
+      align-items: $position;
+    }
+  }
 
-.align-bottom {
-  align-items: flex-end;
-}
+  .justify-content {
+    &-#{$position} {
+      justify-content: $position;
+    }
+  }
 
-.justify-content-start {
-  justify-content: flex-start;
-}
-
-.justify-content-end {
-  justify-content: flex-end;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.justify-content-around {
-  justify-content: space-around;
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
-
-.align-content-start {
-  align-content: flex-start;
-}
-
-.align-content-end {
-  align-content: flex-end;
-}
-
-.align-content-middle {
-  align-content: center;
-}
-
-.align-content-between {
-  align-content: space-between;
-}
-
-.gap-sm {
-  gap: abstract.rem(10);
-}
-
-.gap-md {
-  gap: abstract.rem(14);
-}
-
-.gap-lg {
-  gap: abstract.rem(18);
-}
-
-.gap-x-lg {
-  gap: abstract.rem(24);
+  .align-content {
+    &-#{$position} {
+      align-content: $position;
+    }
+  }
 }
 
 .flex-direction-column {

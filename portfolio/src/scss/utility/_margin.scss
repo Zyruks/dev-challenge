@@ -1,69 +1,54 @@
 @use "../abstract";
+@use "sass:string";
+
+$base-size: 1rem;
+$sizes: (
+  "number-0": 0,
+  "number-1": $base-size * 0.25,
+  "number-2": $base-size * 0.5,
+  "number-3": $base-size * 0.75,
+  "number-4": $base-size * 1,
+  "number-5": $base-size * 1.5,
+  "number-6": $base-size * 2,
+  "number-7": $base-size * 2.5,
+  "number-8": $base-size * 3,
+);
+$sides: inline, inline-start, inline-end, block, block-start, block-end;
+
+@each $size-name, $size-value in $sizes {
+  $name: string.slice($size-name, 8);
+
+  .padding {
+    &-#{$name} {
+      padding: $size-value;
+    }
+
+    @each $side in $sides {
+      &-#{$side}-#{$name} {
+        padding-#{$side}: $size-value;
+      }
+    }
+  }
+
+  .margin {
+    &-#{$name} {
+      margin: $size-value;
+    }
+
+    @each $side in $sides {
+      &-#{$side}-#{$name} {
+        margin-#{$side}: $size-value;
+      }
+    }
+  }
+
+  .gap {
+    &-#{$name} {
+      gap: $size-value;
+    }
+  }
+}
 
 .no-margin {
   margin: 0;
-}
-
-.margin-bottom-sm {
-  margin-block-end: abstract.rem(10);
-}
-
-.margin-bottom-md {
-  margin-block-end: abstract.rem(14);
-}
-
-.margin-bottom-lg {
-  margin-block-end: abstract.rem(18);
-}
-
-.margin-bottom-xlg {
-  margin-block-end: abstract.rem(24);
-}
-
-.margin-top-sm {
-  margin-block-start: abstract.rem(10);
-}
-
-.margin-top-md {
-  margin-block-start: abstract.rem(14);
-}
-
-.margin-top-lg {
-  margin-block-start: abstract.rem(18);
-}
-
-.margin-top-xlg {
-  margin-block-start: abstract.rem(24);
-}
-
-.margin-right-sm {
-  margin-inline-end: abstract.rem(10);
-}
-
-.margin-right-md {
-  margin-inline-end: abstract.rem(14);
-}
-
-.margin-right-lg {
-  margin-inline-end: abstract.rem(18);
-}
-
-.margin-right-xlg {
-  margin-inline-end: abstract.rem(24);
-}
-
-.margin-left-sm {
-  margin-inline-start: abstract.rem(10);
-}
-
-.margin-left-md {
-  margin-inline-start: abstract.rem(14);
-}
-
-.margin-left-lg {
-  margin-inline-start: abstract.rem(18);
-}
-
-.margin-left-xlg {
-  margin-inline-start: abstract.rem(24);
 }

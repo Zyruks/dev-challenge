@@ -1,3 +1,5 @@
+@use "../abstract";
+
 .width-33 {
   @include abstract.breakpoint(large) {
     inline-size: 33%;
