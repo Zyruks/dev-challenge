@@ -36,7 +36,9 @@
             src="./assets/portrait.jpg"
             alt=""
           />
-          <div class="component-text-wrapper align-top justify-content-between">
+          <div
+            class="component-text-wrapper align-items-flex-start justify-content-space-between"
+          >
             <div class="title">
               <h2 class="title__name fs-lg fw-600 text-primary">
                 Samuel Llibre Santos
@@ -48,14 +50,18 @@
             <div class="info-wrapper">
               <div class="info-container">
                 <span class="material-symbols-rounded persona__icon">mail</span>
-                <h4 class="info-text">kuzenshi@&#8203;gmail&#8203;.com</h4>
+                <h4 class="info-text fs-sm fw-500 text-primery">
+                  kuzenshi@&#8203;gmail&#8203;.com
+                </h4>
               </div>
 
               <div class="info-container">
                 <span class="material-symbols-rounded persona__icon"
                   >phone</span
                 >
-                <h4 class="info-text">+1 555 555 5555</h4>
+                <h4 class="info-text fs-sm fw-500 text-primery">
+                  +1 555 555 5555
+                </h4>
               </div>
             </div>
 
@@ -289,54 +295,54 @@
             </div>
           </div>
           <div class="project js-beginner" data-type="beginner">
-        <div class="component-container">
-          <img
-            class="component-img width-33"
-            src="./assets/my-gallery-preview.png"
-            alt=""
-          />
-          <div
+            <div class="component-container">
+              <img
+                class="component-img width-33"
+                src="./assets/my-gallery-preview.png"
+                alt=""
+              />
+              <div
                 class="component-text-wrapper align-items-center justify-content-flex-start align-content-flex-start gap-2"
-          >
-            <div class="tags">
-              <span class="component-tags fs-sm fw-500 text-primary"
-                >#HTML</span
               >
+                <div class="tags">
+                  <span class="component-tags fs-sm fw-500 text-primary"
+                    >#HTML</span
+                  >
                   <span class="component-tags fs-sm fw-500 text-primary"
                     >#CSS</span
                   >
-              <span class="component-tags fs-sm fw-500 text-primary"
-                >#Responsive</span
-              >
-            </div>
-            <h2 class="component-title fs-lg fw-500 text-tertiary">
-              My Gallery
-            </h2>
-            <p class="component-paragraph fs-sm fw-500 text-secondary">
+                  <span class="component-tags fs-sm fw-500 text-primary"
+                    >#Responsive</span
+                  >
+                </div>
+                <h2 class="component-title fs-lg fw-500 text-tertiary">
+                  My Gallery
+                </h2>
+                <p class="component-paragraph fs-sm fw-500 text-secondary">
                   In this project, I work with HTML and CSS to create a
                   responsive page. This page is similar with instagram profile
                   page. The design is from DevChallenge.io
-            </p>
-            <div class="btn-container self-align">
-              <button class="component-btn text-white fs-md fw-500">
-                Demo
-              </button>
+                </p>
+                <div class="btn-container self-align">
+                  <button class="component-btn text-white fs-md fw-500">
+                    Demo
+                  </button>
                   <button
                     class="component-btn component-btn--invert fs-md fw-500"
                   >
-                Code
-              </button>
+                    Code
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
         </div>
       </div>
 
       <div class="skills">
         <div class="component-container">
-          <div class="component-text-wrapper gap-lg">
-            <h2 class="component-title margin-bottom-xlg">FRONT END</h2>
+          <div class="component-text-wrapper gap-2 align-content-space-around">
+            <h2 class="component-title margin-block-end-7">FRONT END</h2>
             <div class="skill">
               <label class="skill__label" for="html">HTML</label>
 
@@ -411,7 +417,7 @@
           <h2 class="component-title fs-lg fw-500 text-tertiary">
             Experiences
           </h2>
-          <div class="d-flex experience-wrapper">
+          <div class="d-flex experience-wrapper flex-direction-column">
             <div class="experience__container d-grid">
               <img
                 class="component-img experience__img"
@@ -425,7 +431,7 @@
                 Front-end developer
               </h3>
               <p
-                class="fs-md fw-500 text-secondary experience__paragraph no-margin"
+                class="fs-md fw-500 text-secondary experience__paragraph margin-0"
               >
                 Donec aliquam est dui, vel vestibulum diam sollicitudin id.
                 Quisque feugiat malesuada molestie.
@@ -444,7 +450,7 @@
                 Front-end developer
               </h3>
               <p
-                class="fs-md fw-500 text-secondary experience__paragraph no-margin"
+                class="fs-md fw-500 text-secondary experience__paragraph margin-0"
               >
                 Donec aliquam est dui, vel vestibulum diam sollicitudin id.
                 Quisque feugiat malesuada molestie.
@@ -463,7 +469,7 @@
                 Front-end developer
               </h3>
               <p
-                class="fs-md fw-500 text-secondary experience__paragraph no-margin"
+                class="fs-md fw-500 text-secondary experience__paragraph margin-0"
               >
                 Donec aliquam est dui, vel vestibulum diam sollicitudin id.
                 Quisque feugiat malesuada molestie.
@@ -473,39 +479,45 @@
         </div>
       </div>
       <div class="hobbies">
-        <div class="component-container d-flex">
-          <h2 class="component-title fs-lg fw-500 text-tertiary">Hobbies</h2>
-          <div class="hobbies-wrapper d-flex">
+        <div
+          class="component-container d-flex d-wrap flex-direction-column gap-6"
+        >
+          <h2 class="component-title fs-lg fw-500 text-primary hobbies-title">
+            Hobbies
+          </h2>
+          <div
+            class="hobbies-wrapper d-flex gap-6 justify-content-space-between"
+          >
             <div class="hobbies__container">
               <img
-                class="component-img"
+                class="component-img hobbies-img"
                 src="./assets/my-gallery-preview.png"
                 alt=""
               />
               <h3 class="fs-md fw-600 text-tertiary">Gaming</h3>
-              <p class="fs-md fw-500 text-secondary no-margin">
+              <p class="fs-sm fw-500 text-secondary margin-0">
                 Quisque feugiat malesuada molestie.
               </p>
             </div>
             <div class="hobbies__container">
               <img
-                class="component-img"
+                class="component-img hobbies-img"
                 src="./assets/my-gallery-preview.png"
                 alt=""
               />
               <h3 class="fs-md fw-600 text-tertiary">Gaming</h3>
-              <p class="fs-md fw-500 text-secondary no-margin">
+              <p class="fs-sm fw-500 text-secondary margin-0">
                 Quisque feugiat malesuada molestie.
               </p>
             </div>
             <div class="hobbies__container">
               <img
-                class="component-img"
+                class="component-img hobbies-img"
                 src="./assets/my-gallery-preview.png"
                 alt=""
               />
               <h3 class="fs-md fw-600 text-tertiary">Gaming</h3>
-              <p class="fs-md fw-500 text-secondary no-margin">
+              <p class="fs-sm fw-500 text-secondary margin-0">
                 Quisque feugiat malesuada molestie.
               </p>
             </div>
@@ -534,6 +546,7 @@
           </div>
         </div>
       </div>
+
       <div class="page-counter">
         <span
           class="page-counter__btn padding-block-2 padding-inline-3 js-btn-lt"
