@@ -1,7 +1,47 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .super-container {
-  max-inline-size: abstract.rem(1440);
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16);
   margin: 0 auto;
+  max-inline-size: rem(1440);
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-rows: rem(380) rem(150) 0.2fr 0.4fr 0.4fr rem(150) 1.2fr 0.1fr;
+    grid-template-columns: 25% 10% 1fr 1fr;
+  }
+}
+
+.profile {
+  grid-area: 1 / 1 / 1 / -1;
+}
+
+.skills {
+  grid-area: 2 / 1 / 4 / 3;
+}
+
+.blog {
+  grid-area: 2 / 3 / 4 / -1;
+}
+
+.hobbies {
+  grid-area: 4 / 1 / 6 / 3;
+}
+
+.experience {
+  grid-area: 5 / 3 / 6 / -1;
+}
+
+.project-type {
+  grid-area: 6 / 1 / 7 / -1;
+}
+
+.page-counter {
+  grid-area: 8 / 3 / 9 / -1;
+  margin-block-start: rem(20);
+}
+
+.super-project {
+  grid-area: 7 / 1 / 8 / -1;
 }
