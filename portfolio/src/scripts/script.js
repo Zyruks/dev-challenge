@@ -67,20 +67,27 @@ btnAll.addEventListener("click", () => {
 
     i++;
   }
+  buttonActive(btnBeginner, btnIntermediate,btnAll );
 });
 
 btnBeginner.addEventListener("click", () => {
   displayAnimation("beginner", "intermediate");
+  buttonActive(btnAll, btnIntermediate, btnBeginner);
+
 });
 
 btnIntermediate.addEventListener("click", () => {
   displayAnimation("intermediate", "beginner");
+  buttonActive(btnAll,btnBeginner, btnIntermediate );
   moveToPage1();
 });
+
+
 
   /* ************* *\
     ? #Events Listeners for project type end
   /* ************* */
+  
 /* ************* *\
   #Events Listeners end
 /* ************* */
@@ -127,13 +134,15 @@ function moveToPage2() {
   pageTwo.classList.remove("leaving-animation-right");
   pageOne.classList.remove("project-wrapper--active");
 }
-/**
+/*
  * It loops through all the projects and if the project's data-type is equal to the type1 argument, it
  * removes the display-none class and adds the active-animation-up class. If the project's data-type is
  * equal to the type2 argument, it adds the display-none class and removes the active-animation-up
  * class.
  * @param type1 - the type of project you want to display
  * @param type2 - the type of projects that are currently displayed
+ ? @param Options = "beginner", "intermediate"
+
  */
 function displayAnimation(type1, type2) {
   let i = 0;
@@ -150,9 +159,10 @@ function displayAnimation(type1, type2) {
   }
 }
 
-/**
+/*
  * If the project has a data-type attribute, remove the animation class from it.
  * @param animation - the animation class you want to add
+ ? @param Options = "active-animation-up", "active-animation-right", "active-animation-left"
  */
 function eliminateAnimation(animation) {
   let i = 0;
@@ -164,6 +174,19 @@ function eliminateAnimation(animation) {
   }
 }
 
+/* 
+ * Remove the class 'type-btn--active' from the first two buttons, and add it to the third button.
+ * @param btn1 - the first button
+ * @param btn2 - the second button
+ * @param btn3 - the button that should be active, the button that is clicked
+ * 
+ ? @param Options = btnAll, btnBeginner, btnIntermediate
+ */
+function buttonActive(btn1, btn2, btn3) {
+  btn1.classList.remove("type-btn--active");
+  btn2.classList.remove("type-btn--active");
+  btn3.classList.add("type-btn--active");
+}
 /* ************* *\
   #functions ends
 /* ************* */
