@@ -2,6 +2,8 @@
 
 
 .type-btn{
+  color: var(--primary-text);
+
   &:hover {
     color: hsl(0deg, 0%, 100%);
     font-weight: 600;

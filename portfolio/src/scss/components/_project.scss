@@ -24,14 +24,18 @@
 
 .active-animation-right {
   animation: key-slide-in-right 500ms forwards, key-opacity-on 500ms forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .active-animation-left {
   animation: key-slide-in-left 500ms forwards, key-opacity-on 500ms forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .active-animation-up {
   animation: key-slide-up 500ms forwards;
+  animation-timing-function: ease-in-out;
+  
 }
 
 @keyframes key-slide-in-right {
