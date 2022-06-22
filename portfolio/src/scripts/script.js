@@ -83,6 +83,18 @@ btnIntermediate.addEventListener("click", () => {
   moveToPage1();
 });
 
+btnAll.addEventListener("mouseover", () => {
+
+  eliminateAnimation("active-animation-up");
+});
+btnBeginner.addEventListener("mouseover", () => {
+
+  eliminateAnimation("active-animation-up");
+});
+btnIntermediate.addEventListener("mouseover", () => {
+
+  eliminateAnimation("active-animation-up");
+});
 /* ************* *\
     ? #Events Listeners for project type end
   /* ************* */
