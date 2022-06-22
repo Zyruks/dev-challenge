@@ -1,14 +1,13 @@
-@use "../abstract";
+@use "../abstract" as *;
 
 .skill {
   display: flex;
+  align-items: center;
 
   justify-content: space-between;
   inline-size: 100%;
-  margin-block-end: abstract.rem(32);
-  @include abstract.breakpoint(large) {
-    inline-size: 45%;
-  }
+
+  block-size: rem(10);
 }
 
 .skill_label {
