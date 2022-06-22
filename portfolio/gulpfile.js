@@ -6,6 +6,7 @@ const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const browserSync = require("browser-sync").create();
 const htmlMinifier = require("gulp-htmlmin");
+const purge = require("gulp-purgecss");
 
 exports.compileJs = compileJs;
 //HTML Function
@@ -20,11 +21,17 @@ function compilescss() {
   return src("src/scss/*.scss", { sourcemaps: true })
     .pipe(sass().on("error", sass.logError)) // Compiler
     .pipe(postcss([autoprefixer("last 2 versions")])) // Pre-fixer
+    .pipe(purge({ content: ["src/**/*.html", "src/**/*.js"] })) // Remove Unused CSS
     .pipe(postcss([cssnano()])) //CSS minifier not running because still looking at code
+
     .pipe(dest("public/css", { sourcemaps: "." }));
 }
 
-exports.compilescss = compilescss;
+exports.compilescss = series(
+  compilescss,
+
+  watchTask
+);
 // assets
 function compilepng() {
   return src("src/assets/**/*.png").pipe(dest("public/assets/"));
@@ -63,7 +70,7 @@ function browserSyncReload(cb) {
 // create watchtask, if something change it will run browserSyncReload.
 
 function watchTask() {
-  watch("src/**/*.html", series(compilehtml, browserSyncReload));
+  watch("src/**/*.html", series(compilehtml, compilescss, browserSyncReload));
   watch(
     "src/scripts/*.js",
     series(compilescss, compilesvg, compilepng, compileJs, browserSyncReload)
