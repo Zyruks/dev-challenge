@@ -1,7 +1,3 @@
-/* ******************* *\
-? #Values Update
-\* ******************* */
-
 // Select buttons for page 1 or 2
 const btnOne = document.querySelector(".js-btn-1");
 const btnTwo = document.querySelector(".js-btn-2");
@@ -14,16 +10,18 @@ const btnBeginner = document.querySelector(".js-btn-beginner");
 const btnIntermediate = document.querySelector(".js-btn-intermediate");
 const projects = document.querySelectorAll(".project");
 const buttonArray = [btnAll, btnBeginner, btnIntermediate];
+
 // Select pages
 const pageOne = document.querySelector(".js-page-1");
 const pageTwo = document.querySelector(".js-page-2");
 
 /* ************* *\
-  #Events Listeners
+ * #Events Listeners
 /* ************* */
 
-/* Adding an event listener to the button. When the button is clicked, it will call the function
-eliminateAnimation and moveToPage1. */
+/*
+ * Adding an event listener to the button. When the button is clicked, it will call the function eliminateAnimation and moveToPage1.
+ */
 
   /* ************* *\
     ? #Events Listeners for page-counter
@@ -55,8 +53,12 @@ btnGreater.addEventListener("click", () => {
     ? #Events Listeners for project type 
   /* ************* */
 
+/*
+ * Select All Beginner and Intermediate projects and make it back to normal
+ */
+
 btnAll.addEventListener("click", () => {
-  // Select All Beginner and Intermediate and make it back to normal
+  
   let i = 0;
   while (i < projects.length) {
     if (projects[i].dataset.type) {
@@ -67,36 +69,33 @@ btnAll.addEventListener("click", () => {
 
     i++;
   }
-  buttonActive(btnBeginner, btnIntermediate,btnAll );
+  buttonActive(btnBeginner, btnIntermediate, btnAll);
 });
 
 btnBeginner.addEventListener("click", () => {
   displayAnimation("beginner", "intermediate");
   buttonActive(btnAll, btnIntermediate, btnBeginner);
-
 });
 
 btnIntermediate.addEventListener("click", () => {
   displayAnimation("intermediate", "beginner");
-  buttonActive(btnAll,btnBeginner, btnIntermediate );
+  buttonActive(btnAll, btnBeginner, btnIntermediate);
   moveToPage1();
 });
 
-
-
-  /* ************* *\
+/* ************* *\
     ? #Events Listeners for project type end
   /* ************* */
-  
+
 /* ************* *\
-  #Events Listeners end
+* #Events Listeners end
 /* ************* */
 
 /* ************* *\
-  #functions
+ * #functions
 /* ************* */
 
-/**
+/*
  * When the user clicks on the first button, the first button becomes active, the second button becomes
  * inactive, the first page becomes active, the first page is animated, the second page is animated,
  * the second page becomes inactive.
@@ -115,7 +114,7 @@ function moveToPage1() {
   pageTwo.classList.remove("project-wrapper--active");
 }
 
-/**
+/*
  * When the button is clicked, remove the active class from the first button, add the active class to
  * the second button, remove the active class from the first page, add the active class to the second
  * page, add the leaving animation to the first page, remove the leaving animation from the second
@@ -144,6 +143,7 @@ function moveToPage2() {
  ? @param Options = "beginner", "intermediate"
 
  */
+
 function displayAnimation(type1, type2) {
   let i = 0;
   while (i < projects.length) {
@@ -164,6 +164,7 @@ function displayAnimation(type1, type2) {
  * @param animation - the animation class you want to add
  ? @param Options = "active-animation-up", "active-animation-right", "active-animation-left"
  */
+
 function eliminateAnimation(animation) {
   let i = 0;
   while (i < projects.length) {
@@ -179,7 +180,6 @@ function eliminateAnimation(animation) {
  * @param btn1 - the first button
  * @param btn2 - the second button
  * @param btn3 - the button that should be active, the button that is clicked
- * 
  ? @param Options = btnAll, btnBeginner, btnIntermediate
  */
 function buttonActive(btn1, btn2, btn3) {
