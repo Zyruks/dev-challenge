@@ -54,9 +54,7 @@ btnGreater.addEventListener("click", () => {
   /* ************* */
 
 /*
- * Select All Beginner and Intermediate projects and make it back to normal
- */
-
+ * Select All Beginner and Intermediate projects and make it back to normal */
 btnAll.addEventListener("click", () => {
   
   let i = 0;
@@ -87,10 +85,12 @@ btnAll.addEventListener("mouseover", () => {
 
   eliminateAnimation("active-animation-up");
 });
+
 btnBeginner.addEventListener("mouseover", () => {
 
   eliminateAnimation("active-animation-up");
 });
+
 btnIntermediate.addEventListener("mouseover", () => {
 
   eliminateAnimation("active-animation-up");
