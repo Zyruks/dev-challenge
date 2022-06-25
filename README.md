@@ -23,6 +23,6 @@ Basics responsive **HTML/SCSS/JS** websites and pages
 
 - Challenge 7 : [**"Edie homepage"**](https://github.com/Zyruks/dev-challenge/tree/main/edie-homepage)
 
-- Challenge 8 : [**"Edie homepage"**](https://github.com/Zyruks/dev-challenge/tree/main/portfolio)
+- Challenge 8 : [**"Portfolio"**](https://github.com/Zyruks/dev-challenge/tree/main/portfolio)
 
 
