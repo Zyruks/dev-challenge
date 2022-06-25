@@ -4,44 +4,91 @@
   display: flex;
   flex-wrap: wrap;
   gap: rem(16);
+  justify-content: center;
   margin: 0 auto;
   max-inline-size: rem(1440);
+
   @include breakpoint(large) {
     display: grid;
-    grid-template-rows: rem(380) rem(380) 0.2fr 0.4fr 0.3fr rem(150) .5fr ;
+    grid-template-rows: rem(380) rem(380) 1fr 1fr rem(150) rem(720) rem(120) 0.15fr;
+    grid-template-columns: 25% 10% 1fr 1fr;
+  }
+  @include breakpoint(x-large) {
+    display: grid;
+    grid-template-rows: rem(380) rem(380) 1fr 1fr 0.8fr rem(150) rem(850) 0.15fr;
     grid-template-columns: 25% 10% 1fr 1fr;
   }
 }
 
 .profile {
-  grid-area: 1 / 1 / 1 / -1;
+  @include breakpoint(large) {
+    grid-area: 1 / 1 / 1 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 1 / 1 / 1 / -1;
+  }
 }
 
 .skills {
-  grid-area: 2 / 1 / 3 / 3;
+  @include breakpoint(large) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
 }
 
 .blog {
-  grid-area: 2 / 3 / 3 / -1;
+  @include breakpoint(large) {
+    grid-area: 2 / 3 / 4 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 2 / 3 / 5 / -1;
+  }
 }
 
 .hobbies {
-  grid-area: 3 / 1 / 6 / 3;
+  @include breakpoint(large) {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 3 / 1 / 6 / 3;
+  }
 }
 
 .experience {
-  grid-area: 5 / 3 / 6 / -1;
+  @include breakpoint(large) {
+    grid-area: 4 / 3 / 5 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 5 / 3 / 6 / -1;
+  }
 }
 
 .project-type {
-  grid-area: 6 / 1 / 7 / -1;
-}
-
-.page-counter {
-  grid-area: 8 / 3 / 9 / -1;
-  margin-block-start: rem(20);
+  @include breakpoint(large) {
+    grid-area: 5 / 1 / 6 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 6 / 1 / 7 / -1;
+  }
 }
 
 .super-project {
-  grid-area: 7 / 1 / 8 / -1;
+  @include breakpoint(large) {
+    grid-area: 6 / 1 / 7 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 7 / 1 / 8 / -1;
+  }
+}
+
+.page-counter {
+  margin-block-start: rem(20);
+  @include breakpoint(large) {
+    grid-area: 8 / 3 / -1 / -1;
+  }
+  @include breakpoint(x-large) {
+    grid-area: 9 / 3 / -1 / -1;
+  }
 }

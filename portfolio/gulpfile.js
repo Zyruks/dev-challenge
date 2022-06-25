@@ -9,6 +9,7 @@ const htmlMinifier = require("gulp-htmlmin");
 const purge = require("gulp-purgecss");
 
 exports.compileJs = compileJs;
+
 //HTML Function
 function compilehtml() {
   return src("src/**/*.html")
@@ -33,11 +34,13 @@ exports.compilescss = series(
   watchTask
 );
 // assets
+
 function compilepng() {
-  return src("src/assets/**/*.png").pipe(dest("public/assets/"));
+  return src("src/assets/**/**/*.png").pipe(dest("public/assets/"));
 }
+
 function compileJpg() {
-  return src("src/assets/**/*.jpg").pipe(dest("public/assets/"));
+  return src("src/assets/**/**/*.jpg").pipe(dest("public/assets/"));
 }
 
 function compilesvg() {

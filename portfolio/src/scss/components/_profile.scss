@@ -7,6 +7,13 @@
   }
 }
 
+.profile-img {
+  min-inline-size: abstract.rem(250);
+
+  inline-size: 100%;
+  max-inline-size: abstract.rem(300);
+}
+
 .title__name {
   margin: 0;
 

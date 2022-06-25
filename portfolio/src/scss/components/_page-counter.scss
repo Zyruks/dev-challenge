@@ -1,7 +1,11 @@
 @use "../abstract/" as *;
 
 .page-counter {
-  inline-size: 100%;
+  inline-size: rem(250);
+  @include breakpoint(large) {
+    inline-size: 100%;
+    block-size: 100%;
+  }
 }
 
 .page-counter__btn {
@@ -18,6 +22,8 @@
   }
 
   &--active {
+    border: rem(1) solid var(--accent-color);
+
     color: hsl(0deg, 0%, 100%);
 
     background-color: var(--accent-color);

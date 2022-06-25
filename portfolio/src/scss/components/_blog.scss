@@ -2,7 +2,7 @@
 
 .blog {
   inline-size: 100%;
-  max-inline-size: abstract.rem(500);
+
   @include abstract.breakpoint(large) {
     max-inline-size: 100%;
   }
@@ -45,5 +45,6 @@
   grid-column: 2;
   @include abstract.breakpoint(large) {
     grid-row: 1 / -1;
+    align-self: center;
   }
 }

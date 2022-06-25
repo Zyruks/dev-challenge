@@ -1,15 +1,39 @@
 @use "../abstract/" as *;
 
-.hobbies,
 .hobbies-title {
   inline-size: 100%;
 }
 
+.hobbies {
+  inline-size: 100%;
+
+  max-inline-size: rem(380);
+
+  @include breakpoint(large) {
+    inline-size: 100%;
+    max-inline-size: none;
+  }
+}
+
 .hobbies-wrapper {
   flex-direction: column;
-  block-size: 92%;
+  block-size: 100%;
+  @include breakpoint(large) {
+    block-size: rem(1100);
+  }
 }
 
 .hobbies-img {
-  max-block-size: 50%;
+  max-block-size: rem(150);
+}
+
+.hobbies__container {
+  block-size: 30%;
+}
+
+.hobbies {
+  block-size: 70%;
+  @include breakpoint(x-large) {
+    block-size: 100%;
+  }
 }

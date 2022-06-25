@@ -2,12 +2,12 @@
 
 .skill {
   display: flex;
-  align-items: center;
 
+  align-items: center;
   justify-content: space-between;
   inline-size: 100%;
 
-  block-size: rem(10);
+  block-size: 100%;
 }
 
 .skill_label {
@@ -16,4 +16,8 @@
 
 .skill__progress {
   inline-size: 70%;
+}
+
+.skills .component-text-wrapper {
+  flex-wrap: nowrap;
 }

@@ -25,9 +25,12 @@
 }
 
 .experience-wrapper {
+  display: flex;
   flex-direction: column;
   @include abstract.breakpoint(large) {
-    flex-direction: row;
+    flex-flow: row wrap;
+  }
+  @include abstract.breakpoint(x-large) {
     justify-content: space-evenly;
   }
 }

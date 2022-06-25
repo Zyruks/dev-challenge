@@ -1,7 +1,10 @@
-@use "../abstract/" as * ;
+@use "../abstract/" as *;
 
+.project-type {
+  inline-size: 100%;
+}
 
-.type-btn{
+.type-btn {
   color: var(--primary-text);
 
   &:hover {
