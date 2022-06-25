@@ -22,6 +22,6 @@
   transition: transform 500ms ease-in-out;
 
   &:hover {
-    transform: translateY(utility.rem(32));
+    transform: scale(1.1);
   }
 }
