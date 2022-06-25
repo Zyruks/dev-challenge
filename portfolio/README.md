@@ -1,4 +1,4 @@
-<h1 align="center">Edie Homepage</h1>
+<h1 align="center">Portfolio Challenge</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>
@@ -6,15 +6,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://zyruks.com/challenges/devchallenges/edie-homepage/">
+    <a href="https://zyruks.com/challenges/devchallenges/portfolio/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/Zyruks/dev-challenge/tree/main/edie-homepage">
+    <a href="https://github.com/Zyruks/dev-challenge/tree/main/portfolio">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0">
+    <a href="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt">
       Challenge
     </a>
   </h3>
@@ -36,13 +36,16 @@
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; ">
 <img src="./screenshots/mobile.png" width="400" title="Screenshot Mobile"/>
-<img src="./screenshots/mobile-menu.png" width="400"  height="800" title="Screenshot Mobile"/>
-<img src="./screenshots/desktop.png" width="600" height="100%" title="Screenshot Desktop"/>
+
+<img src="./screenshots/desktop.png" width="500" height="100%" title="Screenshot Desktop"/>
 
  </div>
 
-This challenge was easy and fun. Try my best using git ;).
-I worked with mobile first.
+I try to use the bootstrap approach but create in scss. It's cool but I don't like not having full control over elements.
+
+Maybe I will try bootstrap later and try to modify it with a different approach.
+
+For the rest it was really intuitive.
 
 ### Built With
 
@@ -58,7 +61,7 @@ I worked with mobile first.
 
 ## Features
 
-This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0) was to build an application to complete the given user stories.
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt) was to build an application to complete the given user stories.
 
 ## Acknowledgements
 
